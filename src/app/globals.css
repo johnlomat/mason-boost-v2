@@ -30,6 +30,9 @@ body {
 .subheading {
   @apply leading-tight md:text-xl xl:text-[1.2rem];
 }
+.container {
+  @apply max-[767px]:px-[1.5rem];
+}
 
 @media screen and (min-width: 1440px) {
   html {
