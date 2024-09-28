@@ -7,15 +7,15 @@ import Link from 'next/link'
 const Footer = () => {
   return (
     <React.Fragment>
-      <footer className="relative bg-white py-16">
-        <div className="container">
-          <div className="space-y-6 bg-brown p-5 md:p-16">
-            <div className="header-2 uppercase text-white">
+      <footer className="relative bg-white py-0 md:py-16">
+        <div className="md:container">
+          <div className="space-y-6 bg-brown px-0 py-16 md:p-10 lg:p-16">
+            <div className="header-2 container uppercase text-white md:max-w-full md:p-0">
               <h2>Newsletter</h2>
             </div>
-            <NewsLetterForm />
+            <NewsLetterForm className="container md:max-w-full md:p-0" />
           </div>
-          <div className="flex flex-col justify-between gap-y-6 py-6 md:mb-2 md:mt-8 md:flex-row md:py-0">
+          <div className="flex flex-col justify-between gap-y-6 pb-8 pt-16 md:mb-2 md:mt-8 md:flex-row md:py-0">
             <nav className="uppercase">
               <ul className="flex flex-col space-x-0 space-y-4 text-center md:flex-row md:space-x-5 md:space-y-0 xl:text-left">
                 <li>
@@ -45,11 +45,11 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="border-t-[1px] border-clay pt-8">
+        <div className="border-t-[1px] border-clay pb-16 pt-8 md:pb-0">
           <div className="container">
             <div className="grid grid-cols-2 gap-y-6">
               <div className="col-span-2 flex flex-col justify-start gap-x-8 gap-y-6 md:col-span-1 xl:flex-row">
-                <div className="md:0 mx-auto max-w-[300px]">
+                <div className="mx-auto max-w-[300px] md:m-0">
                   <Image
                     src="/images/mason-boost-logo.svg"
                     alt="Mason Boost Logo"

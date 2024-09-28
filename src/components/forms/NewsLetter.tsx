@@ -2,10 +2,11 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Checkbox } from '@/components/ui/checkbox'
+import { cn } from '@/lib/utils'
 
-const NewsLetterForm = () => {
+const NewsLetterForm = ({ className }: { className?: string }) => {
   return (
-    <div className="flex flex-col space-y-2">
+    <div className={cn('flex flex-col space-y-2', className)}>
       <Input
         type="email"
         placeholder="Email address"
