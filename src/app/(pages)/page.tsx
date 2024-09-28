@@ -88,7 +88,7 @@ export default function Home() {
             width={31}
             height={41}
           />
-          <div className="absolute bottom-0 h-[60px] w-full rounded-t-[2.5rem] bg-white"></div>
+          <div className="rounded-0 absolute bottom-0 h-[60px] w-full bg-white md:rounded-t-[2.5rem]"></div>
         </div>
       </section>
 
@@ -191,7 +191,7 @@ export default function Home() {
         <div className="container">
           <div className="header-2 text-center text-black">
             <TextRevealByWord
-              text="Our websites are more than just visually stunning—they’re built to perform."
+              text="Our websites are more than just visually stunning they’re built to perform."
               center={true}
             />
           </div>
