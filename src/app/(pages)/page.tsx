@@ -15,7 +15,7 @@ import {
 export default function Home() {
   return (
     <main>
-      <section className="relative flex flex-col justify-center bg-[url('/images/hero-section-background-1.png')] bg-cover bg-center bg-no-repeat pt-[12rem]">
+      <section className="relative flex flex-col justify-center bg-[url('/_next/image?url=%2Fimages%2Fhero-section-background-1.png&w=1200&q=100')] bg-cover bg-center bg-no-repeat pt-[12rem]">
         <div className="container mb-12 xl:mb-0">
           <div className="flex flex-col justify-center space-y-8">
             <div className="header-1 text-center uppercase text-white">
