@@ -21,9 +21,13 @@ const config: Config = {
       },
     },
     extend: {
-      fontFamily: {
-        montserrat: ['var(--font-montserrat)'],
-        roboto: ['var(--font-roboto)'],
+      animation: {
+        'spin-slow': 'spin 6s linear infinite',
+      },
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
       },
       colors: {
         background: 'var(--background)',
@@ -32,10 +36,9 @@ const config: Config = {
         gray: '#D3D3D1',
         clay: '#4B4B4D',
       },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+      fontFamily: {
+        montserrat: ['var(--font-montserrat)'],
+        roboto: ['var(--font-roboto)'],
       },
     },
   },

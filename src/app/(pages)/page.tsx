@@ -3,101 +3,72 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
-      <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-center font-[family-name:var(--font-geist-mono)] text-sm sm:text-left">
-          <li className="mb-2">
-            Get started by editing{' '}
-            <code className="rounded bg-black/[.05] px-1 py-0.5 font-semibold dark:bg-white/[.06]">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex flex-col items-center gap-4 sm:flex-row">
-          <a
-            className="flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent bg-foreground px-4 text-sm text-background transition-colors hover:bg-[#383838] sm:h-12 sm:px-5 sm:text-base dark:hover:bg-[#ccc]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="flex h-10 items-center justify-center rounded-full border border-solid border-black/[.08] px-4 text-sm transition-colors hover:border-transparent hover:bg-[#f2f2f2] sm:h-12 sm:min-w-44 sm:px-5 sm:text-base dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-          <Button>Test</Button>
+    <main>
+      <section className="relative flex flex-col justify-center bg-[url('/images/hero-section-background-1.png')] bg-cover bg-center bg-no-repeat pt-[12rem]">
+        <div className="container">
+          <div className="flex flex-col justify-center space-y-8">
+            <div className="header-1 text-center uppercase text-white">
+              <h1>Transform Your Online Presence with a Stunning, Modern Website</h1>
+            </div>
+            <div className="text-center">
+              <Button variant="secondary">Get Your Consultation Today</Button>
+            </div>
+            <div className="grid grid-cols-5">
+              <div className="col-span-1 flex flex-col space-y-1 text-white">
+                <span className="text-[2.4rem] font-medium">5k+</span>
+                <span>Satisfied Customers</span>
+              </div>
+              <div className="col-span-1 flex flex-col space-y-1 text-white">
+                <span className="text-[2.4rem] font-medium">15</span>
+                <span>Years Experience</span>
+              </div>
+              <div className="col-span-1"></div>
+              <div className="col-span-1 flex flex-col space-y-1 text-white">
+                <span className="text-[2.4rem] font-medium">28</span>
+                <span>Experienced Member</span>
+              </div>
+              <div className="col-span-1 flex flex-col space-y-1 text-white">
+                <span className="text-[2.4rem] font-medium">1500+</span>
+                <span>Successful Projects</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex flex-wrap items-center justify-center gap-6">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="relative -mt-10 w-full pb-[58px]">
           <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            className="relative bottom-0 left-1/2 z-10 -translate-x-1/2"
+            src="/images/shape-divider-1.png"
+            alt="Shape divider"
+            width={360}
+            height={116}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            className="absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2"
+            src="/images/Group-8.png"
+            alt="Shape"
+            width={151}
+            height={151}
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+          <div className="absolute left-1/2 top-1/2 z-30 h-[130px] w-[133px] -translate-x-1/2 -translate-y-1/2">
+            <Image
+              className="animate-spin-slow"
+              src="/images/Frame-453.png"
+              alt="Shape"
+              width={133}
+              height={130}
+            />
+          </div>
+
           <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+            className="absolute left-1/2 top-1/2 z-40 -translate-x-1/2 -translate-y-1/2"
+            src="/images/Mouse.png"
+            alt="Mouse"
+            width={31}
+            height={41}
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <div className="absolute bottom-0 h-[60px] w-full bg-white"></div>
+        </div>
+      </section>
+    </main>
   )
 }
