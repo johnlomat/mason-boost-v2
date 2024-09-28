@@ -11,7 +11,7 @@ const NewsLetterForm = () => {
         placeholder="Email address"
         className="rounded-none border-0 border-b-[1px] border-white font-normal text-white placeholder:font-normal placeholder:text-white focus-visible:ring-0"
       />
-      <div className="flex justify-between">
+      <div className="flex flex-col justify-between gap-y-4 md:flex-row">
         <div className="flex items-center space-x-2">
           <Checkbox
             id="terms"
@@ -24,7 +24,7 @@ const NewsLetterForm = () => {
             </Link>
           </label>
         </div>
-        <Button variant="secondary" type="submit">
+        <Button variant="secondary" className="uppercase" type="submit">
           Subscribe Now
         </Button>
       </div>

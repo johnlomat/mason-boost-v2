@@ -1,16 +1,76 @@
 import React from 'react'
 import NewsLetterForm from '@/components/forms/NewsLetter'
+import Image from 'next/image'
+import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
     <React.Fragment>
       <footer className="relative bg-white py-16">
         <div className="container">
-          <div className="space-y-6 bg-brown p-16">
+          <div className="space-y-6 bg-brown p-5 md:p-16">
             <div className="header-2 uppercase text-white">
               <h2>Newsletter</h2>
             </div>
             <NewsLetterForm />
+          </div>
+          <div className="flex flex-col justify-between gap-y-6 py-6 md:mb-2 md:mt-8 md:flex-row md:py-0">
+            <nav className="uppercase">
+              <ul className="flex flex-col space-x-0 space-y-4 text-center md:flex-row md:space-x-5 md:space-y-0 xl:text-left">
+                <li>
+                  <Link href="#">Home</Link>
+                </li>
+                <li>
+                  <Link href="#">About</Link>
+                </li>
+                <li>
+                  <Link href="#">Services</Link>
+                </li>
+                <li>
+                  <Link href="#">Work</Link>
+                </li>
+              </ul>
+            </nav>
+            <div className="flex justify-center gap-4 md:justify-end">
+              <Link href="https://www.instagram.com/masonboost/" target="_blank">
+                <FaInstagram className="text-[1.5rem] text-clay" />
+              </Link>
+              <Link href="https://www.facebook.com/profile.php?id=61561506080680" target="_blank">
+                <FaFacebook className="text-[1.5rem] text-clay" />
+              </Link>
+              <Link href="https://www.linkedin.com/company/mason-boost-ltd" target="_blank">
+                <FaLinkedin className="text-[1.5rem] text-clay" />
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="border-t-[1px] border-clay pt-8">
+          <div className="container">
+            <div className="grid grid-cols-2 gap-y-6">
+              <div className="col-span-2 flex flex-col justify-start gap-x-8 gap-y-6 md:col-span-1 xl:flex-row">
+                <div className="md:0 mx-auto max-w-[300px]">
+                  <Image
+                    src="/images/mason-boost-logo.svg"
+                    alt="Mason Boost Logo"
+                    width={300}
+                    height={54}
+                  />
+                </div>
+                <div className="body-text text-center text-[0.75rem] uppercase md:text-left">
+                  <span>
+                    We blend creativity with technology to deliver digital solutions tailored to
+                    your needs.
+                  </span>
+                </div>
+              </div>
+              <div className="body-text col-span-2 text-center text-[0.75rem] md:col-span-1 md:text-right">
+                Email: support@[brandname].com <br />
+                Phone: (123) 456-7890 <br />
+                Office Hours: Mon-Fri, 9 AM - 5PM <br />
+                Copyright © 2024 Mason Boost. All rights reserved.
+              </div>
+            </div>
           </div>
         </div>
       </footer>
