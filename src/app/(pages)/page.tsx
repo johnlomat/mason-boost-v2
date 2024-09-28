@@ -12,6 +12,7 @@ import {
   CardHeader,
 } from '@/components/ui/card'
 import TextRevealByWord from '@/components/ui/text-reveal'
+import NewsLetterForm from '@/components/forms/NewsLetter'
 
 export default function Home() {
   return (
@@ -187,13 +188,100 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative bg-white uppercase">
+      <section className="relative bg-white">
         <div className="container">
-          <div className="header-2 text-center text-black">
+          <div className="header-2 text-center uppercase text-black">
             <TextRevealByWord
               text="Our websites are more than just visually stunning they’re built to perform."
               center={true}
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="relative bg-black py-16">
+        <div className="container mb-16">
+          <div className="header-2 uppercase text-white">
+            <h2>How it works</h2>
+          </div>
+        </div>
+        <div className="border-t-[1px] border-gray py-6">
+          <div className="container">
+            <div className="grid grid-cols-2 gap-y-6">
+              <div className="col-span-2 md:col-span-1">
+                <div className="text-[1.2rem] text-white">
+                  <span>01</span>
+                </div>
+                <div className="header-3 uppercase text-white">
+                  <h3>Consultation</h3>
+                </div>
+              </div>
+              <div className="col-span-2 md:col-span-1">
+                <div className="text-[1.2rem] text-gray">
+                  <p>
+                    Tell us about your contracting business and your goals. We&apos;re here to help
+                    you succeed by understanding your unique needs.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="border-t-[1px] border-gray py-6">
+          <div className="container">
+            <div className="grid grid-cols-2 gap-y-6">
+              <div className="col-span-2 md:col-span-1">
+                <div className="text-[1.2rem] text-white">
+                  <span>02</span>
+                </div>
+                <div className="header-3 uppercase text-white">
+                  <h3>We Create</h3>
+                </div>
+              </div>
+              <div className="col-span-2 md:col-span-1">
+                <div className="text-[1.2rem] text-gray">
+                  <p>
+                    Our team will craft the perfect plan to attract more opportunities, gain new
+                    customers, and increase your revenue. We&apos;ll get your business in front of
+                    the right people at the right time.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="border-t-[1px] border-gray py-6">
+          <div className="container">
+            <div className="grid grid-cols-2 gap-y-6">
+              <div className="col-span-2 md:col-span-1">
+                <div className="text-[1.2rem] text-white">
+                  <span>03</span>
+                </div>
+                <div className="header-3 uppercase text-white">
+                  <h3>You Grow</h3>
+                </div>
+              </div>
+              <div className="col-span-2 md:col-span-1">
+                <div className="text-[1.2rem] text-gray">
+                  <p>
+                    We begin with an in-depth consultation to understand your goals, target
+                    audience, and vision. This helps us gather all the necessary information to
+                    create a tailored solution that fits your needs.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative bg-white py-16">
+        <div className="container">
+          <div className="space-y-6 bg-brown p-16">
+            <div className="header-2 uppercase text-white">
+              <h2>Newsletter</h2>
+            </div>
+            <NewsLetterForm />
           </div>
         </div>
       </section>
