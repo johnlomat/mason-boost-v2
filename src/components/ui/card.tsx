@@ -56,7 +56,7 @@ const CardTags = ({ tags, className }: { tags: string[]; className?: string }) =
         {tags.map((tag, index) => (
           <div
             key={index}
-            className={cn('rounded-full border-[1px] border-brown px-2 py-1 text-gray', className)}
+            className={cn('rounded-full border-[1px] border-brown px-4 py-1 text-gray', className)}
           >
             {tag}
           </div>

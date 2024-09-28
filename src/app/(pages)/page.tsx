@@ -121,7 +121,7 @@ export default function Home() {
         <div className="container">
           <div className="space-y-10">
             <HeadingBlock heading="Our Services" headingColor="white" />
-            <Card className="grid grid-cols-2 gap-x-0 gap-y-8 rounded-[2rem] lg:gap-x-[6rem] lg:gap-y-0">
+            <Card className="grid grid-cols-2 gap-x-0 gap-y-12 rounded-[2rem] lg:gap-x-[6rem] lg:gap-y-0">
               <CardContent className="col-span-2 flex flex-col justify-center lg:col-span-1">
                 <CardHeader>
                   <CardTitle>Web Design</CardTitle>
@@ -149,7 +149,7 @@ export default function Home() {
                 />
               </div>
             </Card>
-            <Card className="grid grid-cols-2 gap-x-0 gap-y-8 rounded-[2rem] lg:gap-x-[6rem] lg:gap-y-0">
+            <Card className="grid grid-cols-2 gap-x-0 gap-y-12 rounded-[2rem] lg:gap-x-[6rem] lg:gap-y-0">
               <CardContent className="col-span-2 flex flex-col justify-center lg:col-span-1">
                 <CardHeader>
                   <CardTitle>SEO</CardTitle>
@@ -166,6 +166,14 @@ export default function Home() {
                   Our SEO experts use a strategic approach to help your business rank higher in
                   search results and attract more traffic. With a focus on long-term success, we
                   offer a range of SEO services.
+                  <br />
+                  <br />
+                  <span className="text-white">
+                    <strong>
+                      Let us help you drive more traffic to your website, improve search rankings,
+                      and grow your business online.
+                    </strong>
+                  </span>
                 </CardDescription>
                 <div>
                   <Button asChild className="hover:border-white hover:bg-white">
@@ -199,10 +207,14 @@ export default function Home() {
       </section>
 
       <section className="relative bg-black py-16">
-        <div className="container mb-16">
-          <div className="header-2 uppercase text-white">
-            <h2>How it works</h2>
-          </div>
+        <div className="container mb-6">
+          <HeadingBlock
+            heading="How it works"
+            subheading="Our process"
+            headingColor="white"
+            subheadingColor="white"
+            className="text-left md:text-right"
+          />
         </div>
         <div className="border-t-[1px] border-gray py-6">
           <div className="container">
@@ -218,8 +230,9 @@ export default function Home() {
               <div className="col-span-2 md:col-span-1">
                 <div className="text-[1.2rem] text-gray">
                   <p>
-                    Tell us about your contracting business and your goals. We&apos;re here to help
-                    you succeed by understanding your unique needs.
+                    We start by listening to your needs and understanding your business. Whether
+                    you&apos;re looking for a redesign or a new website, we’ll tailor the solution
+                    to you.
                   </p>
                 </div>
               </div>
@@ -234,15 +247,14 @@ export default function Home() {
                   <span>02</span>
                 </div>
                 <div className="header-3 uppercase text-white">
-                  <h3>We Create</h3>
+                  <h3>Design & Develop</h3>
                 </div>
               </div>
               <div className="col-span-2 md:col-span-1">
                 <div className="text-[1.2rem] text-gray">
                   <p>
-                    Our team will craft the perfect plan to attract more opportunities, gain new
-                    customers, and increase your revenue. We&apos;ll get your business in front of
-                    the right people at the right time.
+                    Our team creates a unique, modern design based on your vision and goals. We
+                    ensure your website is responsive and optimized for SEO.
                   </p>
                 </div>
               </div>
@@ -257,15 +269,14 @@ export default function Home() {
                   <span>03</span>
                 </div>
                 <div className="header-3 uppercase text-white">
-                  <h3>You Grow</h3>
+                  <h3>Launch & Review</h3>
                 </div>
               </div>
               <div className="col-span-2 md:col-span-1">
                 <div className="text-[1.2rem] text-gray">
                   <p>
-                    We begin with an in-depth consultation to understand your goals, target
-                    audience, and vision. This helps us gather all the necessary information to
-                    create a tailored solution that fits your needs.
+                    We launch your new website and provide ongoing support. All we ask is a
+                    Trustpilot review once your website goes live.
                   </p>
                 </div>
               </div>
