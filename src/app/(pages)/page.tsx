@@ -12,6 +12,7 @@ import {
   CardHeader,
 } from '@/components/ui/card'
 import TextRevealByWord from '@/components/ui/text-reveal'
+import ImageWithText from '@/components/ImageWithText'
 
 export default function Home() {
   return (
@@ -96,7 +97,7 @@ export default function Home() {
         <div className="container">
           <div className="grid grid-cols-2 gap-y-10 md:gap-x-14">
             <div className="col-span-2 flex items-center md:col-span-1">
-              <HeadingBlock heading="Mason BOOST LTD" subheading="Who we are">
+              <HeadingBlock heading="Mason BOOST LTD" subheading="Who we are" headingSize="md">
                 <div className="body-text">
                   <p>
                     We’re a web design agency dedicated to building beautiful, user-optimized
@@ -112,6 +113,45 @@ export default function Home() {
             </div>
             <div className="col-span-2 md:col-span-1">
               <Image src="/images/about-us-image.png" alt="About us" width={630} height={460} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative bg-black py-16 xl:py-[7rem]">
+        <div className="container space-y-12">
+          <div className="grid grid-cols-2">
+            <div className="col-span-2 lg:col-span-1">
+              <HeadingBlock
+                heading="Why choose Mason Boost for your website"
+                subheading="Why choose us"
+                headingColor="white"
+                subheadingColor="white"
+                headingSize="sm"
+              />
+            </div>
+          </div>
+          <div className="grid grid-cols-4 gap-8">
+            <div className="col-span-4 md:col-span-2 xl:col-span-1">
+              <ImageWithText
+                heading="Modern, Clean Design"
+                imageSrc="/images/Modern-Clean-Design-image.png"
+              />
+            </div>
+            <div className="col-span-4 md:col-span-2 xl:col-span-1">
+              <ImageWithText
+                heading="Mobile Friendly"
+                imageSrc="/images/Mobile-Friendly-image.png"
+              />
+            </div>
+            <div className="col-span-4 md:col-span-2 xl:col-span-1">
+              <ImageWithText heading="SEO Optimized" imageSrc="/images/SEO-Optimized-image.png" />
+            </div>
+            <div className="col-span-4 md:col-span-2 xl:col-span-1">
+              <ImageWithText
+                heading="Tailored to Your Business"
+                imageSrc="/images/Tailored-to-Your-Business-image.png"
+              />
             </div>
           </div>
         </div>
@@ -220,7 +260,7 @@ export default function Home() {
           <div className="container">
             <div className="grid grid-cols-2 gap-y-6">
               <div className="col-span-2 md:col-span-1">
-                <div className="text-[1.2rem] text-white">
+                <div className="subheading text-white">
                   <span>01</span>
                 </div>
                 <div className="header-3 uppercase text-white">
@@ -228,7 +268,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="col-span-2 md:col-span-1">
-                <div className="text-[1.2rem] text-gray">
+                <div className="subheading text-gray">
                   <p>
                     We start by listening to your needs and understanding your business. Whether
                     you&apos;re looking for a redesign or a new website, we’ll tailor the solution
@@ -243,7 +283,7 @@ export default function Home() {
           <div className="container">
             <div className="grid grid-cols-2 gap-y-6">
               <div className="col-span-2 md:col-span-1">
-                <div className="text-[1.2rem] text-white">
+                <div className="subheading text-white">
                   <span>02</span>
                 </div>
                 <div className="header-3 uppercase text-white">
@@ -251,7 +291,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="col-span-2 md:col-span-1">
-                <div className="text-[1.2rem] text-gray">
+                <div className="subheading text-gray">
                   <p>
                     Our team creates a unique, modern design based on your vision and goals. We
                     ensure your website is responsive and optimized for SEO.
@@ -265,7 +305,7 @@ export default function Home() {
           <div className="container">
             <div className="grid grid-cols-2 gap-y-6">
               <div className="col-span-2 md:col-span-1">
-                <div className="text-[1.2rem] text-white">
+                <div className="subheading text-white">
                   <span>03</span>
                 </div>
                 <div className="header-3 uppercase text-white">
@@ -273,7 +313,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="col-span-2 md:col-span-1">
-                <div className="text-[1.2rem] text-gray">
+                <div className="subheading text-gray">
                   <p>
                     We launch your new website and provide ongoing support. All we ask is a
                     Trustpilot review once your website goes live.

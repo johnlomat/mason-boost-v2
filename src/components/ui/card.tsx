@@ -31,7 +31,7 @@ const CardDescription = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
-  <p ref={ref} className={cn('text-[1.2rem] text-gray', className)} {...props} />
+  <p ref={ref} className={cn('subheading text-gray', className)} {...props} />
 ))
 CardDescription.displayName = 'CardDescription'
 
@@ -56,7 +56,10 @@ const CardTags = ({ tags, className }: { tags: string[]; className?: string }) =
         {tags.map((tag, index) => (
           <div
             key={index}
-            className={cn('rounded-full border-[1px] border-brown px-4 py-1 text-gray', className)}
+            className={cn(
+              'rounded-full border-[1px] border-brown px-4 py-1 font-roboto text-gray',
+              className,
+            )}
           >
             {tag}
           </div>
