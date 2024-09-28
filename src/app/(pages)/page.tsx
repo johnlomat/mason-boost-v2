@@ -324,6 +324,34 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="relative bg-brown py-16 xl:py-[7.5rem]">
+        <div className="container">
+          <div className="grid grid-cols-12">
+            <div className="col-span-8"></div>
+            <div className="col-span-4">
+              <HeadingBlock
+                heading="Our Work Speaks for Itself"
+                subheading="Portfolio"
+                headingColor="white"
+                subheadingColor="white"
+                headingSize="md"
+              >
+                <div className="text-white">
+                  <p>
+                    Explore our portfolio to see how we’ve helped businesses like yours achieve
+                    their online goals. Each project is a testament to our commitment to quality and
+                    creativity.
+                  </p>
+                </div>
+                <Button asChild variant="secondary">
+                  <Link href="#">Start your project</Link>
+                </Button>
+              </HeadingBlock>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }
