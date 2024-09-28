@@ -4,6 +4,7 @@ import { HamburgerMenuIcon } from '@radix-ui/react-icons'
 import { Button } from './ui/button'
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet'
 import NavMenu from './ui/nav'
+import Link from 'next/link'
 
 const Header = () => {
   return (
@@ -23,7 +24,9 @@ const Header = () => {
               />
             </div>
             <div className="col-span-5 hidden items-center justify-end xl:flex">
-              <Button className="uppercase">Contact us</Button>
+              <Button className="uppercase" asChild>
+                <Link href="#">Contact us</Link>
+              </Button>
             </div>
             <div className="col-span-4 flex items-center justify-end xl:hidden">
               <Sheet>
