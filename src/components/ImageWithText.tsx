@@ -16,6 +16,7 @@ const ImageWithText = ({ imageSrc, heading }: ImageWithTextProp) => {
           width={300}
           height={255}
           className="w-full transition-all duration-300 group-hover:scale-125"
+          quality={100}
         />
         <div className="absolute bottom-0 left-0 z-30 w-full px-7 py-8">
           <div className="subheading leading-tight text-white">
