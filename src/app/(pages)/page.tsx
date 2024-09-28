@@ -11,6 +11,7 @@ import {
   CardTitle,
   CardHeader,
 } from '@/components/ui/card'
+import TextRevealByWord from '@/components/ui/text-reveal'
 
 export default function Home() {
   return (
@@ -186,10 +187,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative bg-white py-16 uppercase xl:py-[11rem]">
+      <section className="relative bg-white uppercase">
         <div className="container">
           <div className="header-2 text-center text-black">
-            <HeadingBlock heading="Our websites are more than just visually stunning—they’re built to perform." />
+            <TextRevealByWord
+              text="Our websites are more than just visually stunning—they’re built to perform."
+              center={true}
+            />
           </div>
         </div>
       </section>
