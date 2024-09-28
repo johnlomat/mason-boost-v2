@@ -3,6 +3,14 @@ import Image from 'next/image'
 import NumberTicker from '@/components/ui/number-ticker'
 import HeadingBlock from '@/components/HeadingBlock'
 import Link from 'next/link'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardTags,
+  CardTitle,
+  CardHeader,
+} from '@/components/ui/card'
 
 export default function Home() {
   return (
@@ -83,7 +91,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative bg-white py-[8.5rem]">
+      <section className="relative -mt-[2px] bg-white py-[8.5rem]">
         <div className="container">
           <div className="grid grid-cols-2 gap-x-14">
             <div className="col-span-1 flex items-center">
@@ -110,7 +118,71 @@ export default function Home() {
 
       <section className="relative bg-black bg-[url('/images/noisy-gradients.svg')] bg-cover bg-center bg-no-repeat py-[7.5rem]">
         <div className="container">
-          <HeadingBlock heading="Our Services" headingColor="white" />
+          <div className="space-y-10">
+            <HeadingBlock heading="Our Services" headingColor="white" />
+            <Card className="grid grid-cols-2 gap-x-0 gap-y-8 rounded-[2rem] lg:gap-x-[6rem] lg:gap-y-0">
+              <CardContent className="col-span-2 flex flex-col justify-center lg:col-span-1">
+                <CardHeader>
+                  <CardTitle>Web Design</CardTitle>
+                  <CardTags tags={['Creative web design', 'FIGMA']} />
+                </CardHeader>
+                <CardDescription>
+                  Looking for a modern, responsive website? We are offering a limited number of free
+                  web designs for businesses looking to transform their online presence. In exchange
+                  for a Trustpilot review, we’ll design and develop a fully customized website that
+                  helps you achieve your business goals.
+                </CardDescription>
+                <div>
+                  <Button asChild className="hover:border-white hover:bg-white">
+                    <Link href="#">Find out more</Link>
+                  </Button>
+                </div>
+              </CardContent>
+              <div className="col-span-2 lg:col-span-1">
+                <Image
+                  src="/images/web-design-image.png"
+                  alt="Web Design"
+                  width={551}
+                  height={581}
+                  className="w-full"
+                />
+              </div>
+            </Card>
+            <Card className="grid grid-cols-2 gap-x-0 gap-y-8 rounded-[2rem] lg:gap-x-[6rem] lg:gap-y-0">
+              <CardContent className="col-span-2 flex flex-col justify-center lg:col-span-1">
+                <CardHeader>
+                  <CardTitle>SEO</CardTitle>
+                  <CardTags
+                    tags={[
+                      'On-Page Optimization',
+                      'Keyword Research',
+                      'Backlink Strategies',
+                      'Technical SEO',
+                    ]}
+                  />
+                </CardHeader>
+                <CardDescription>
+                  Our SEO experts use a strategic approach to help your business rank higher in
+                  search results and attract more traffic. With a focus on long-term success, we
+                  offer a range of SEO services.
+                </CardDescription>
+                <div>
+                  <Button asChild className="hover:border-white hover:bg-white">
+                    <Link href="#">Find out more</Link>
+                  </Button>
+                </div>
+              </CardContent>
+              <div className="col-span-2 lg:col-span-1">
+                <Image
+                  src="/images/seo-image.png"
+                  alt="SEO"
+                  width={551}
+                  height={581}
+                  className="w-full"
+                />
+              </div>
+            </Card>
+          </div>
         </div>
       </section>
 
