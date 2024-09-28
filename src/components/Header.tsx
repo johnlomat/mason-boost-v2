@@ -1,35 +1,45 @@
 import React from 'react'
 import Image from 'next/image'
+import { HamburgerMenuIcon } from '@radix-ui/react-icons'
 import { Button } from './ui/button'
+import { Sheet, SheetContent, SheetTrigger } from './ui/sheet'
+import NavMenu from './ui/nav'
 
 const Header = () => {
   return (
     <React.Fragment>
-      <div className="container">
-        <header className="mt-[2.5rem] grid grid-cols-12 rounded-2xl bg-gray p-[1.5rem]">
-          <div className="col-span-5 flex items-center">
-            <nav className="uppercase">
-              <ul className="flex space-x-5">
-                <li>Home</li>
-                <li>About</li>
-                <li>Services</li>
-                <li>Work</li>
-              </ul>
-            </nav>
+      <header className="absolute z-10 w-full pt-6 md:pt-[2.5rem]">
+        <div className="container">
+          <div className="grid grid-cols-12 rounded-2xl bg-white p-4 md:p-[1.5rem]">
+            <div className="col-span-5 hidden items-center xl:flex">
+              <NavMenu />
+            </div>
+            <div className="col-span-8 flex max-w-[276px] items-center xl:col-span-2">
+              <Image
+                src="/images/mason-boost-logo.svg"
+                alt="Mason Boost Logo"
+                width={276}
+                height={52}
+              />
+            </div>
+            <div className="col-span-5 hidden items-center justify-end xl:flex">
+              <Button className="uppercase">Contact us</Button>
+            </div>
+            <div className="col-span-4 flex items-center justify-end xl:hidden">
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button size="icon">
+                    <HamburgerMenuIcon />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent>
+                  <NavMenu />
+                </SheetContent>
+              </Sheet>
+            </div>
           </div>
-          <div className="col-span-2 flex items-center">
-            <Image
-              src="/images/mason-boost-logo.svg"
-              alt="Mason Boost Logo"
-              width={276}
-              height={52}
-            />
-          </div>
-          <div className="col-span-5 flex items-center justify-end">
-            <Button className="uppercase">Contact us</Button>
-          </div>
-        </header>
-      </div>
+        </div>
+      </header>
     </React.Fragment>
   )
 }
