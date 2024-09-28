@@ -87,14 +87,14 @@ export default function Home() {
             width={31}
             height={41}
           />
-          <div className="absolute bottom-0 h-[60px] w-full bg-white"></div>
+          <div className="absolute bottom-0 h-[60px] w-full rounded-t-[2.5rem] bg-white"></div>
         </div>
       </section>
 
-      <section className="relative -mt-[2px] bg-white py-[8.5rem]">
+      <section className="relative -mt-[2px] bg-white py-16 xl:py-[8.5rem]">
         <div className="container">
-          <div className="grid grid-cols-2 gap-x-14">
-            <div className="col-span-1 flex items-center">
+          <div className="grid grid-cols-2 gap-y-10 md:gap-x-14">
+            <div className="col-span-2 flex items-center md:col-span-1">
               <HeadingBlock heading="Mason BOOST LTD" subheading="Who we are">
                 <div className="body-text">
                   <p>
@@ -109,14 +109,14 @@ export default function Home() {
                 </Button>
               </HeadingBlock>
             </div>
-            <div className="col-span-1">
+            <div className="col-span-2 md:col-span-1">
               <Image src="/images/about-us-image.png" alt="About us" width={630} height={460} />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="relative bg-black bg-[url('/images/noisy-gradients.svg')] bg-cover bg-center bg-no-repeat py-[7.5rem]">
+      <section className="relative bg-black bg-[url('/images/noisy-gradients.svg')] bg-cover bg-center bg-no-repeat py-16 xl:py-[7.5rem]">
         <div className="container">
           <div className="space-y-10">
             <HeadingBlock heading="Our Services" headingColor="white" />
@@ -186,7 +186,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative bg-white py-[11rem] uppercase">
+      <section className="relative bg-white py-16 uppercase xl:py-[11rem]">
         <div className="container">
           <div className="header-2 text-center text-black">
             <HeadingBlock heading="Our websites are more than just visually stunning—they’re built to perform." />
