@@ -19,6 +19,7 @@ const NewsLetterForm = ({ className }: { className?: string }) => {
             <Checkbox
               id="terms"
               className="border-white data-[state=checked]:bg-white data-[state=checked]:text-brown"
+              aria-label="Terms and Conditions"
             />
             <label htmlFor="terms" className="leading-none text-white">
               I agree with the{' '}
