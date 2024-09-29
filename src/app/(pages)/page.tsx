@@ -15,6 +15,12 @@ import TextRevealByWord from '@/components/ui/text-reveal'
 import ImageWithText from '@/components/ImageWithText'
 import GetInTouchSection from '@/components/sections/get-in-touch'
 import OurPortfolioSection from '@/components/sections/our-portfolio'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
 
 export default function Home() {
   return (
@@ -417,6 +423,60 @@ export default function Home() {
       </section>
 
       <OurPortfolioSection />
+
+      <section className="relative bg-black py-16 xl:py-[6.3rem]">
+        <div className="container">
+          <div className="grid grid-cols-12 gap-y-10">
+            <div className="col-span-12 md:col-span-5">
+              <HeadingBlock heading="Faq’s" headingColor="white">
+                <div className="subheading uppercase text-white">
+                  <p>Frequently Asked Questions</p>
+                </div>
+                <Button asChild variant="outline-secondary">
+                  <Link href="#">Start your project</Link>
+                </Button>
+              </HeadingBlock>
+            </div>
+            <div className="col-span-12 md:col-span-7">
+              <Accordion type="single" collapsible className="w-full text-white">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>What services do you offer?</AccordionTrigger>
+                  <AccordionContent>
+                    Yes. It adheres to the WAI-ARIA design pattern.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>How long does it take to design a website?</AccordionTrigger>
+                  <AccordionContent>
+                    Yes. It comes with default styles that matches the other components&apos;
+                    aesthetic.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>Can I update the website myself?</AccordionTrigger>
+                  <AccordionContent>
+                    Yes. It&apos;s animated by default, but you can disable it if you prefer.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-4">
+                  <AccordionTrigger>
+                    What if I need changes after the website is live?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    Yes. It&apos;s animated by default, but you can disable it if you prefer.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-5">
+                  <AccordionTrigger>Do you provide website hosting?</AccordionTrigger>
+                  <AccordionContent>
+                    Yes. It&apos;s animated by default, but you can disable it if you prefer.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="relative bg-black bg-[url('/images/section-background-1.svg')] bg-cover bg-center bg-no-repeat py-16 xl:py-[9.25rem]">
         <div className="container">
