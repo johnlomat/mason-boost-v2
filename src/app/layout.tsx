@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import LenisScroll from '@/components/LenisScroll'
+import AnimatedCursor from '@/components/AnimatedCursor'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -34,6 +35,30 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn('antialiased', montserrat.variable, roboto.variable)}>
         <LenisScroll />
+        <AnimatedCursor
+          color="255, 255, 255"
+          innerSize={8}
+          outerSize={8}
+          outerAlpha={0.2}
+          innerScale={0.7}
+          outerScale={5}
+          clickables={[
+            'a',
+            'input[type="text"]',
+            'input[type="email"]',
+            'input[type="number"]',
+            'input[type="submit"]',
+            'input[type="image"]',
+            'label[for]',
+            'select',
+            'textarea',
+            'button',
+            '.link',
+          ]}
+          outerStyle={{
+            mixBlendMode: 'exclusion',
+          }}
+        />
         <div className="page-container font-montserrat">
           <Header />
           {children}
