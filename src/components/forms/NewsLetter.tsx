@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 
 const NewsLetterForm = ({ className }: { className?: string }) => {
   return (
-    <div className={cn('flex flex-col space-y-2', className)}>
+    <div className={cn('flex flex-col space-y-4', className)}>
       <Input
         type="email"
         placeholder="Email address"
