@@ -36,7 +36,7 @@ export default function RootLayout({
       <body className={cn('antialiased', montserrat.variable, roboto.variable)}>
         <LenisScroll />
         <AnimatedCursor
-          color="218, 71, 165"
+          color="255, 255, 255"
           innerSize={8}
           outerSize={35}
           innerScale={1}
@@ -55,8 +55,12 @@ export default function RootLayout({
             'button',
             '.link',
           ]}
+          innerStyle={{
+            border: '1px solid rgba(0, 0, 0)',
+          }}
           outerStyle={{
-            border: '3px solid rgba(218, 71, 165)',
+            border: '3px solid rgba(255, 255, 255)',
+            outline: '1px solid rgba(0, 0, 0)',
           }}
         />
         <div className="page-container font-montserrat">
