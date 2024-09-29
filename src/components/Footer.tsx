@@ -33,13 +33,25 @@ const Footer = () => {
               </ul>
             </nav>
             <div className="flex justify-center gap-4 md:justify-end">
-              <Link href="https://www.instagram.com/masonboost/" target="_blank">
+              <Link
+                href="https://www.instagram.com/masonboost/"
+                target="_blank"
+                aria-label="Instagram"
+              >
                 <FaInstagram className="text-[1.5rem] text-clay" />
               </Link>
-              <Link href="https://www.facebook.com/profile.php?id=61561506080680" target="_blank">
+              <Link
+                href="https://www.facebook.com/profile.php?id=61561506080680"
+                target="_blank"
+                aria-label="Facebook"
+              >
                 <FaFacebook className="text-[1.5rem] text-clay" />
               </Link>
-              <Link href="https://www.linkedin.com/company/mason-boost-ltd" target="_blank">
+              <Link
+                href="https://www.linkedin.com/company/mason-boost-ltd"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
                 <FaLinkedin className="text-[1.5rem] text-clay" />
               </Link>
             </div>
