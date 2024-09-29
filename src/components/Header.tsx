@@ -27,7 +27,7 @@ const Header = () => {
             </div>
             <div className="col-span-5 hidden items-center justify-end xl:flex">
               <Button className="uppercase" asChild>
-                <Link href="#">Contact us</Link>
+                <Link href="/contact-us">Contact us</Link>
               </Button>
             </div>
             <div className="col-span-4 flex items-center justify-end xl:hidden">
@@ -39,6 +39,11 @@ const Header = () => {
                 </SheetTrigger>
                 <SheetContent>
                   <NavMenu />
+                  <div className="text-center">
+                    <Button className="uppercase" asChild>
+                      <Link href="/contact-us">Contact us</Link>
+                    </Button>
+                  </div>
                 </SheetContent>
               </Sheet>
             </div>

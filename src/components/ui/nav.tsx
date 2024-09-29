@@ -26,10 +26,17 @@ const NavMenu = () => {
             </Link>
           </li>
           <li>
-            <Link href="#">Services</Link>
+            <Link
+              href="/services"
+              className={cn({ 'font-bold text-brown': pathname === '/services' })}
+            >
+              Services
+            </Link>
           </li>
           <li>
-            <Link href="#">Work</Link>
+            <Link href="/work" className={cn({ 'font-bold text-brown': pathname === '/work' })}>
+              Work
+            </Link>
           </li>
         </ul>
       </nav>
