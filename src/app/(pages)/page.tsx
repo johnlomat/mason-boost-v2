@@ -1,8 +1,8 @@
-import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 import Image from 'next/image'
+import { Button } from '@/components/ui/button'
 import NumberTicker from '@/components/ui/number-ticker'
 import HeadingBlock from '@/components/HeadingBlock'
-import Link from 'next/link'
 import {
   Card,
   CardContent,
@@ -13,7 +13,8 @@ import {
 } from '@/components/ui/card'
 import TextRevealByWord from '@/components/ui/text-reveal'
 import ImageWithText from '@/components/ImageWithText'
-import Marquee from '@/components/ui/marquee'
+import GetInTouchSection from '@/components/sections/get-in-touch'
+import OurPortfolioSection from '@/components/sections/our-portfolio'
 
 export default function Home() {
   return (
@@ -415,139 +416,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative bg-brown py-16 xl:py-[7.5rem]">
-        <div className="md:container">
-          <div className="grid grid-cols-12 gap-x-0 gap-y-8 xl:gap-x-[4rem]">
-            <div className="col-span-12 xl:col-span-8">
-              <div className="relative flex h-[400px] w-full flex-col items-center justify-center overflow-hidden bg-background">
-                <Marquee pauseOnHover className="[--duration:20s]">
-                  <Image
-                    src="/images/portfolio-image-1.png"
-                    alt="Portfolio"
-                    width={300}
-                    height={400}
-                  />
-                  <Image
-                    src="/images/portfolio-image-2.png"
-                    alt="Portfolio"
-                    width={300}
-                    height={400}
-                  />
-                  <Image
-                    src="/images/portfolio-image-3.png"
-                    alt="Portfolio"
-                    width={300}
-                    height={400}
-                  />
-                  <Image
-                    src="/images/portfolio-image-4.png"
-                    alt="Portfolio"
-                    width={300}
-                    height={400}
-                  />
-                  <Image
-                    src="/images/portfolio-image-5.png"
-                    alt="Portfolio"
-                    width={300}
-                    height={400}
-                  />
-                  <Image
-                    src="/images/portfolio-image-6.png"
-                    alt="Portfolio"
-                    width={300}
-                    height={400}
-                  />
-                </Marquee>
-                <div className="pointer-events-none absolute inset-y-0 -left-1 w-[4rem] bg-gradient-to-r from-brown"></div>
-                <div className="pointer-events-none absolute inset-y-0 -right-1 w-[4rem] bg-gradient-to-l from-brown"></div>
-              </div>
-            </div>
-            <div className="container col-span-12 md:max-w-full md:px-0 xl:col-span-4">
-              <HeadingBlock
-                heading="Our Work Speaks for Itself"
-                subheading="Portfolio"
-                headingColor="white"
-                subheadingColor="white"
-                headingSize="md"
-              >
-                <div className="text-white">
-                  <p>
-                    Explore our portfolio to see how we’ve helped businesses like yours achieve
-                    their online goals. Each project is a testament to our commitment to quality and
-                    creativity.
-                  </p>
-                </div>
-                <Button asChild variant="secondary">
-                  <Link href="#">Start your project</Link>
-                </Button>
-              </HeadingBlock>
-            </div>
-          </div>
-        </div>
-      </section>
+      <OurPortfolioSection />
 
-      <section className="relative bg-black py-16 xl:py-[7rem]">
-        <div className="container mb-6">
-          <div className="flex flex-col justify-between gap-y-6 md:flex-row">
-            <HeadingBlock heading="Get in touch" headingColor="white" />
-            <div>
-              <Button asChild variant="outline-secondary">
-                <Link href="#">Start your project</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-        <div className="border-t-[1px] border-gray py-6">
-          <div className="container">
-            <div className="grid grid-cols-2 gap-x-10 gap-y-6">
-              <div className="col-span-2 md:col-span-1">
-                <div className="header-5 text-white">
-                  <h3>For Clients</h3>
-                </div>
-                <div className="text-gray">
-                  <p>
-                    Have a project in mind? Curious if light art is something for you? We are glad
-                    to discuss opportunities with you!
-                  </p>
-                </div>
-              </div>
-              <div className="col-span-2 mr-0 flex flex-col items-start md:col-span-1 md:items-end lg:mr-16">
-                <div className="header-5 text-white">
-                  <h4>Team Member 1 Name</h4>
-                </div>
-                <div className="text-gray">
-                  <p>support@[brandname].com</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="border-t-[1px] border-gray py-6">
-          <div className="container">
-            <div className="grid grid-cols-2 gap-x-10 gap-y-6">
-              <div className="col-span-2 md:col-span-1">
-                <div className="header-5 text-white">
-                  <h3>For Talents</h3>
-                </div>
-                <div className="text-gray">
-                  <p>
-                    We are curious to hear about you, see your work and get to know about your
-                    artistic ideas and vision. We are always open for new collaborations!
-                  </p>
-                </div>
-              </div>
-              <div className="col-span-2 mr-0 flex flex-col items-start md:col-span-1 md:items-end lg:mr-16">
-                <div className="header-5 text-white">
-                  <h4>Team Member 2 Name</h4>
-                </div>
-                <div className="text-gray">
-                  <p>support@[brandname].com</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <GetInTouchSection />
     </main>
   )
 }

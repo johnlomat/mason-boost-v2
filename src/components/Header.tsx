@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
-import { HamburgerMenuIcon } from '@radix-ui/react-icons'
-import { Button } from './ui/button'
-import { Sheet, SheetContent, SheetTrigger } from './ui/sheet'
-import NavMenu from './ui/nav'
 import Link from 'next/link'
+import { HamburgerMenuIcon } from '@radix-ui/react-icons'
+import { Button } from '@/components/ui/button'
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+import NavMenu from '@/components/ui/nav'
 
 const Header = () => {
   return (

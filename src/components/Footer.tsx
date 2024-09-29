@@ -19,7 +19,7 @@ const Footer = () => {
             <nav className="uppercase">
               <ul className="flex flex-col space-x-0 space-y-4 text-center md:flex-row md:space-x-5 md:space-y-0 xl:text-left">
                 <li>
-                  <Link href="#">Home</Link>
+                  <Link href="/">Home</Link>
                 </li>
                 <li>
                   <Link href="#">About</Link>
