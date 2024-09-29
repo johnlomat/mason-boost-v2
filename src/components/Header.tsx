@@ -31,7 +31,7 @@ const Header = () => {
             <div className="col-span-4 flex items-center justify-end xl:hidden">
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button size="icon">
+                  <Button size="icon" aria-label="Menu">
                     <HamburgerMenuIcon />
                   </Button>
                 </SheetTrigger>
