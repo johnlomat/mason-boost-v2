@@ -21,6 +21,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
+import ProjectCard from '@/components/ProjectCard'
 
 export default function Home() {
   return (
@@ -423,6 +424,25 @@ export default function Home() {
       </section>
 
       <OurPortfolioSection />
+
+      <section className="relative bg-brown pb-16 xl:pb-[8rem]">
+        <div className="container">
+          <div className="grid grid-cols-2 gap-x-7 gap-y-7 md:gap-y-[4rem]">
+            <div className="col-span-2 md:col-span-1">
+              <ProjectCard name="Project Name" date="2024" image="/images/project-1-image.png" />
+            </div>
+            <div className="col-span-2 md:col-span-1">
+              <ProjectCard name="Project Name" date="2024" image="/images/project-2-image.png" />
+            </div>
+            <div className="col-span-2 md:col-span-1">
+              <ProjectCard name="Project Name" date="2024" image="/images/project-3-image.png" />
+            </div>
+            <div className="col-span-2 md:col-span-1">
+              <ProjectCard name="Project Name" date="2024" image="/images/project-4-image.png" />
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="relative bg-black py-16 xl:py-[6.3rem]">
         <div className="container">
