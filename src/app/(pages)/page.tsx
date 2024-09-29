@@ -452,7 +452,7 @@ export default function Home() {
                   width={410}
                   height={241}
                 />
-                <div className="bg-black px-[3.5rem] py-[2.75rem]">
+                <div className="bg-black p-5 xl:px-[3.5rem] xl:py-[2.75rem]">
                   <div className="header-4 text-white">
                     <h3>Blog Post 1</h3>
                   </div>
@@ -466,7 +466,7 @@ export default function Home() {
                   width={410}
                   height={241}
                 />
-                <div className="bg-black px-[3.5rem] py-[2.75rem]">
+                <div className="bg-black p-5 xl:px-[3.5rem] xl:py-[2.75rem]">
                   <div className="header-4 text-white">
                     <h3>Blog Post 2</h3>
                   </div>
@@ -480,7 +480,7 @@ export default function Home() {
                   width={410}
                   height={241}
                 />
-                <div className="bg-black px-[3.5rem] py-[2.75rem]">
+                <div className="bg-black p-5 xl:px-[3.5rem] xl:py-[2.75rem]">
                   <div className="header-4 text-white">
                     <h3>Blog Post 3</h3>
                   </div>
