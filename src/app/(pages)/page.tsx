@@ -418,6 +418,80 @@ export default function Home() {
 
       <OurPortfolioSection />
 
+      <section className="relative bg-black bg-[url('/images/section-background-1.svg')] bg-cover bg-center bg-no-repeat py-16 xl:py-[9.25rem]">
+        <div className="container">
+          <div className="space-y-14">
+            <div className="grid grid-cols-3 gap-y-10">
+              <div className="col-span-3 md:col-span-2">
+                <HeadingBlock
+                  heading="Insights & Tips"
+                  subheading="Blog"
+                  headingColor="white"
+                  subheadingColor="white"
+                >
+                  <div className="text-gray">
+                    <p>
+                      Stay updated with our latest articles on web design trends, tips, and best
+                      practices. We share valuable insights to help you navigate the digital
+                      landscape.
+                    </p>
+                  </div>
+                </HeadingBlock>
+              </div>
+              <div className="col-span-3 flex items-center justify-start md:col-span-1 md:justify-end">
+                <Button asChild variant="outline-secondary" className="uppercase">
+                  <Link href="#">Find out more</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="grid grid-cols-4 gap-x-7 gap-y-7 lg:grid-cols-3">
+              <div className="col-span-4 md:col-span-2 lg:col-span-1">
+                <Image
+                  src="/images/blog-post-1-image.png"
+                  alt="Blog Post 1"
+                  width={410}
+                  height={241}
+                />
+                <div className="bg-black px-[3.5rem] py-[2.75rem]">
+                  <div className="header-4 text-white">
+                    <h3>Blog Post 1</h3>
+                  </div>
+                  <div className="subheading text-gray">[Title and brief description]</div>
+                </div>
+              </div>
+              <div className="col-span-4 md:col-span-2 lg:col-span-1">
+                <Image
+                  src="/images/blog-post-2-image.png"
+                  alt="Blog Post 2"
+                  width={410}
+                  height={241}
+                />
+                <div className="bg-black px-[3.5rem] py-[2.75rem]">
+                  <div className="header-4 text-white">
+                    <h3>Blog Post 2</h3>
+                  </div>
+                  <div className="subheading text-gray">[Title and brief description]</div>
+                </div>
+              </div>
+              <div className="col-span-4 md:col-span-2 lg:col-span-1">
+                <Image
+                  src="/images/blog-post-3-image.png"
+                  alt="Blog Post 3"
+                  width={410}
+                  height={241}
+                />
+                <div className="bg-black px-[3.5rem] py-[2.75rem]">
+                  <div className="header-4 text-white">
+                    <h3>Blog Post 3</h3>
+                  </div>
+                  <div className="subheading text-gray">[Title and brief description]</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <GetInTouchSection />
     </main>
   )
