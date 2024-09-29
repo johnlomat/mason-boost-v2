@@ -18,7 +18,12 @@ const NavMenu = () => {
             </Link>
           </li>
           <li>
-            <Link href="#">About</Link>
+            <Link
+              href="/about-us"
+              className={cn({ 'font-bold text-brown': pathname === '/about-us' })}
+            >
+              About
+            </Link>
           </li>
           <li>
             <Link href="#">Services</Link>

@@ -16,12 +16,14 @@ const Header = () => {
               <NavMenu />
             </div>
             <div className="col-span-8 flex max-w-[276px] items-center xl:col-span-2">
-              <Image
-                src="/images/mason-boost-logo.svg"
-                alt="Mason Boost Logo"
-                width={276}
-                height={52}
-              />
+              <Link href="/">
+                <Image
+                  src="/images/mason-boost-logo.svg"
+                  alt="Mason Boost Logo"
+                  width={276}
+                  height={52}
+                />
+              </Link>
             </div>
             <div className="col-span-5 hidden items-center justify-end xl:flex">
               <Button className="uppercase" asChild>

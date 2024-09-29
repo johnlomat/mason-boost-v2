@@ -47,9 +47,9 @@ const HeadingBlock = ({
   heading,
   className,
   children,
-  subheadingColor = 'default', // Default value
-  headingColor = 'default', // Default value
-  headingSize = 'default',
+  subheadingColor,
+  headingColor,
+  headingSize,
 }: HeadingBlockProp) => {
   return (
     <React.Fragment>

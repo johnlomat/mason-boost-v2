@@ -62,12 +62,14 @@ const Footer = () => {
             <div className="grid grid-cols-2 gap-y-6">
               <div className="col-span-2 flex flex-col justify-start gap-x-8 gap-y-6 md:col-span-1 xl:flex-row">
                 <div className="mx-auto max-w-[300px] md:m-0">
-                  <Image
-                    src="/images/mason-boost-logo.svg"
-                    alt="Mason Boost Logo"
-                    width={300}
-                    height={54}
-                  />
+                  <Link href="/">
+                    <Image
+                      src="/images/mason-boost-logo.svg"
+                      alt="Mason Boost Logo"
+                      width={300}
+                      height={54}
+                    />
+                  </Link>
                 </div>
                 <div className="body-text text-center text-[0.75rem] uppercase md:text-left">
                   <span>
