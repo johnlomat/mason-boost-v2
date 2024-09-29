@@ -63,10 +63,16 @@ const OurPortfolioSection = ({ sectionBackgroundColor }: OurPortfolioSectionProp
                   />
                 </Marquee>
                 <div
-                  className={`pointer-events-none absolute inset-y-0 -left-1 w-[4rem] bg-gradient-to-r from-${sectionBackgroundColor ? sectionBackgroundColor : 'brown'}`}
+                  className={cn(
+                    'pointer-events-none absolute inset-y-0 -left-1 w-[4rem] bg-gradient-to-r from-brown',
+                    { 'from-black': sectionBackgroundColor === 'black' },
+                  )}
                 ></div>
                 <div
-                  className={`pointer-events-none absolute inset-y-0 -right-1 w-[4rem] bg-gradient-to-l from-${sectionBackgroundColor ? sectionBackgroundColor : 'brown'}`}
+                  className={cn(
+                    'pointer-events-none absolute inset-y-0 -right-1 w-[4rem] bg-gradient-to-l from-brown',
+                    { 'from-black': sectionBackgroundColor === 'black' },
+                  )}
                 ></div>
               </div>
             </div>
