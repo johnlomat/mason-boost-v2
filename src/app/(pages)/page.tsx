@@ -180,7 +180,7 @@ export default function Home() {
                   </Button>
                 </div>
               </CardContent>
-              <div className="col-span-2 lg:col-span-1">
+              <div className="col-span-2 hidden lg:col-span-1 lg:block">
                 <Image
                   src="/images/web-design-image.png"
                   alt="Web Design"
@@ -222,7 +222,7 @@ export default function Home() {
                   </Button>
                 </div>
               </CardContent>
-              <div className="col-span-2 lg:col-span-1">
+              <div className="col-span-2 hidden lg:col-span-1 lg:block">
                 <Image
                   src="/images/seo-image.png"
                   alt="SEO"
@@ -319,6 +319,95 @@ export default function Home() {
                     We launch your new website and provide ongoing support. All we ask is a
                     Trustpilot review once your website goes live.
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative bg-black bg-[url('/images/section-background-1.svg')] bg-cover bg-center bg-no-repeat py-16 xl:py-[6.5rem]">
+        <div className="container">
+          <div className="rounded-[1.5rem] bg-black px-10 py-[4rem]">
+            <div className="space-y-16">
+              <div className="mx-auto max-w-[700px]">
+                <HeadingBlock
+                  heading="What you’ll get with our wed design offer"
+                  subheading="Our Features"
+                  headingColor="white"
+                  subheadingColor="white"
+                  className="text-center"
+                  headingSize="sm"
+                />
+              </div>
+              <div className="grid grid-cols-4 gap-x-6 gap-y-10">
+                <div className="col-span-4 md:col-span-2 lg:col-span-1">
+                  <div className="space-y-4">
+                    <Image
+                      src="/images/web-design-1.svg"
+                      alt="Custom Design"
+                      width={100}
+                      height={100}
+                      className="mx-auto"
+                    />
+                    <div className="subheading mx-auto max-w-[100px] text-center font-semibold uppercase text-white">
+                      <h3>Custom Design</h3>
+                    </div>
+                    <div className="text-center text-gray">
+                      <p>We’ll build a website that’s unique to your business and brand.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-span-4 md:col-span-2 lg:col-span-1">
+                  <div className="space-y-4">
+                    <Image
+                      src="/images/mobile-friendly-1.svg"
+                      alt="SEO-Friendly structure"
+                      width={100}
+                      height={100}
+                      className="mx-auto"
+                    />
+                    <div className="subheading mx-auto max-w-[160px] text-center font-semibold uppercase text-white">
+                      <h3>SEO-Friendly structure</h3>
+                    </div>
+                    <div className="text-center text-gray">
+                      <p>We’ll build a website that’s unique to your business and brand.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-span-4 md:col-span-2 lg:col-span-1">
+                  <div className="space-y-4">
+                    <Image
+                      src="/images/pen-tool-1.svg"
+                      alt="Responsive layout"
+                      width={100}
+                      height={100}
+                      className="mx-auto"
+                    />
+                    <div className="subheading mx-auto max-w-[160px] text-center font-semibold uppercase text-white">
+                      <h3>Responsive layout</h3>
+                    </div>
+                    <div className="text-center text-gray">
+                      <p>Your site will look great on any device, from mobile to desktop.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-span-4 md:col-span-2 lg:col-span-1">
+                  <div className="space-y-4">
+                    <Image
+                      src="/images/deadline-1.svg"
+                      alt="Fast & Secure"
+                      width={100}
+                      height={100}
+                      className="mx-auto"
+                    />
+                    <div className="subheading mx-auto max-w-[100px] text-center font-semibold uppercase text-white">
+                      <h3>Fast & Secure</h3>
+                    </div>
+                    <div className="text-center text-gray">
+                      <p>Your site will look great on any device, from mobile to desktop.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
