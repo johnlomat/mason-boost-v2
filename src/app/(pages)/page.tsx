@@ -166,7 +166,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative bg-black bg-[url('/images/noisy-gradients.svg')] bg-cover bg-center bg-no-repeat py-16 xl:py-[7.5rem]">
+      <section className="relative bg-[#041A28] bg-[url('/images/noisy-gradients.svg')] bg-cover bg-center bg-no-repeat py-16 xl:py-[7.5rem]">
         <div className="container">
           <div className="space-y-10">
             <HeadingBlock heading="Our Services" headingColor="white" />
@@ -334,7 +334,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative bg-black bg-[url('/images/section-background-1.svg')] bg-cover bg-center bg-no-repeat py-16 xl:py-[6.5rem]">
+      <section className="relative bg-[#041A28] bg-[url('/images/section-background-1.svg')] bg-cover bg-center bg-no-repeat py-16 xl:py-[6.5rem]">
         <div className="container">
           <div className="rounded-[1.5rem] bg-black px-10 py-[4rem]">
             <div className="space-y-16">
@@ -427,7 +427,7 @@ export default function Home() {
 
       <section className="relative bg-brown pb-16 xl:pb-[8rem]">
         <div className="container">
-          <div className="grid grid-cols-2 gap-x-7 gap-y-7 md:gap-y-[4rem]">
+          <div className="mb-10 grid grid-cols-2 gap-x-7 gap-y-7 md:gap-y-[4rem] xl:mb-[4.5rem]">
             <div className="col-span-2 md:col-span-1">
               <ProjectCard name="Project Name" date="2024" image="/images/project-1-image.png" />
             </div>
@@ -440,6 +440,11 @@ export default function Home() {
             <div className="col-span-2 md:col-span-1">
               <ProjectCard name="Project Name" date="2024" image="/images/project-4-image.png" />
             </div>
+          </div>
+          <div className="text-center">
+            <Button asChild variant="outline-secondary">
+              <Link href="#">Learn more</Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -498,7 +503,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative bg-black bg-[url('/images/section-background-1.svg')] bg-cover bg-center bg-no-repeat py-16 xl:py-[9.25rem]">
+      <section className="relative bg-[#041A28] bg-[url('/images/section-background-1.svg')] bg-cover bg-center bg-no-repeat py-16 xl:py-[9.25rem]">
         <div className="container">
           <div className="space-y-14">
             <div className="grid grid-cols-3 gap-y-10">

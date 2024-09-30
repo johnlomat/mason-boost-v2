@@ -1,10 +1,37 @@
 import React from 'react'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
+import { cva } from 'class-variance-authority'
+
+const headingVariants = cva('uppercase', {
+  variants: {
+    headingColor: {
+      default: 'text-[#353535]',
+      white: 'text-white',
+    },
+  },
+  defaultVariants: {
+    headingColor: 'default',
+  },
+})
+
+const descriptionVariants = cva('', {
+  variants: {
+    descriptionColor: {
+      default: 'body-text',
+      gray: 'text-gray',
+    },
+  },
+  defaultVariants: {
+    descriptionColor: 'default',
+  },
+})
 
 type BaseProps = {
   heading?: string
+  headingColor?: 'default' | 'white'
   description: string
+  descriptionColor?: 'default' | 'gray'
   className?: string
 }
 
@@ -32,7 +59,9 @@ type ItemListProp = WithImage | WithoutImage
 const ItemList = ({
   bullet,
   heading,
+  headingColor,
   description,
+  descriptionColor,
   bulletNoBackground = false,
   useImage,
   imageSrc,
@@ -61,11 +90,11 @@ const ItemList = ({
             {bullet}
           </div>
         )}
-        <div className={cn({ 'space-y-4': heading })}>
-          <div className="header-5 text-[#353535]">
+        <div className={cn({ 'space-y-4 self-center': heading })}>
+          <div className={cn('header-5', headingVariants({ headingColor }))}>
             <h3>{heading}</h3>
           </div>
-          <div className="body-text">
+          <div className={cn(descriptionVariants({ descriptionColor }))}>
             <p>{description}</p>
           </div>
         </div>

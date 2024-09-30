@@ -25,10 +25,10 @@ const Footer = () => {
                   <Link href="/about-us">About</Link>
                 </li>
                 <li>
-                  <Link href="#">Services</Link>
+                  <Link href="/services">Services</Link>
                 </li>
                 <li>
-                  <Link href="#">Work</Link>
+                  <Link href="/work">Work</Link>
                 </li>
               </ul>
             </nav>
@@ -79,8 +79,21 @@ const Footer = () => {
                 </div>
               </div>
               <div className="body-text col-span-2 text-center text-[0.75rem] md:col-span-1 md:text-right">
-                Email: support@[brandname].com <br />
-                Phone: (123) 456-7890 <br />
+                Email:{' '}
+                <Link href="mailto:david@masonboost.com" className="underline">
+                  David@masonboost.com
+                </Link>{' '}
+                <br />
+                Maria:{' '}
+                <Link href="tel:+15877425355" className="underline">
+                  (587) 742-5355
+                </Link>{' '}
+                <br />
+                M.B.L.T.D:{' '}
+                <Link href="tel:+15874094416" className="underline">
+                  (587) 409-4416
+                </Link>{' '}
+                <br />
                 Office Hours: Mon-Fri, 9 AM - 5PM <br />
                 Copyright © 2024 Mason Boost. All rights reserved.
               </div>

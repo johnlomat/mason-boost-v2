@@ -11,7 +11,7 @@ const HeroSection = ({ heading, backgroundImage }: HeroSectionProp) => {
     <React.Fragment>
       <section
         className={cn(
-          'relative flex min-h-[43.5rem] flex-col justify-center bg-brown bg-cover bg-center bg-no-repeat pt-[8rem]',
+          'relative flex min-h-[43.5rem] flex-col justify-center bg-brown bg-cover bg-center bg-no-repeat md:pt-[8rem]',
           backgroundImage,
         )}
       >

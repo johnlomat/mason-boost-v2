@@ -20,7 +20,6 @@ export default function AboutUsPage() {
           <HeadingBlock
             heading="About us"
             headingColor="white"
-            subheadingColor="white"
             className="text-left md:text-right"
           />
         </div>
