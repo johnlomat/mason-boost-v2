@@ -1,13 +1,33 @@
-import React from 'react'
+'use client'
+
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { HamburgerMenuIcon } from '@radix-ui/react-icons'
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
 import { Button } from '@/components/ui/button'
-import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet'
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetClose } from '@/components/ui/sheet'
 import NavMenu from '@/components/ui/nav'
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const handleNavClick = () => {
+    setIsOpen(false)
+  }
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsOpen(false)
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
   return (
     <React.Fragment>
       <header className="absolute z-10 w-full pt-6 md:pt-[2.5rem]">
@@ -32,7 +52,7 @@ const Header = () => {
               </Button>
             </div>
             <div className="col-span-4 flex items-center justify-end xl:hidden">
-              <Sheet>
+              <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>
                   <Button size="icon" aria-label="Menu">
                     <HamburgerMenuIcon />
@@ -42,11 +62,13 @@ const Header = () => {
                   <VisuallyHidden.Root>
                     <SheetTitle>Menu</SheetTitle>
                   </VisuallyHidden.Root>
-                  <NavMenu />
+                  <NavMenu onNavClick={handleNavClick} />
                   <div className="text-center">
-                    <Button className="uppercase" asChild>
-                      <Link href="/contact-us">Contact us</Link>
-                    </Button>
+                    <SheetClose asChild>
+                      <Button className="uppercase" asChild>
+                        <Link href="/contact-us">Contact us</Link>
+                      </Button>
+                    </SheetClose>
                   </div>
                 </SheetContent>
               </Sheet>
