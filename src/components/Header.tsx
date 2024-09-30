@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { HamburgerMenuIcon } from '@radix-ui/react-icons'
 import { Button } from '@/components/ui/button'
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet'
 import NavMenu from '@/components/ui/nav'
 
 const Header = () => {
@@ -38,6 +38,7 @@ const Header = () => {
                   </Button>
                 </SheetTrigger>
                 <SheetContent>
+                  <SheetTitle>Menu</SheetTitle>
                   <NavMenu />
                   <div className="text-center">
                     <Button className="uppercase" asChild>
