@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import HeadingBlock from '@/components/HeadingBlock'
+import HeadingBlock from '@/components/ui/heading-block'
 import { Button } from '@/components/ui/button'
 import Marquee from '@/components/ui/marquee'
 import { cn } from '@/lib/utils'
@@ -92,7 +92,7 @@ const OurPortfolioSection = ({ sectionBackgroundColor }: OurPortfolioSectionProp
                   </p>
                 </div>
                 <Button asChild variant="secondary">
-                  <Link href="#">Start your project</Link>
+                  <Link href="/contact-us">Start your project</Link>
                 </Button>
               </HeadingBlock>
             </div>

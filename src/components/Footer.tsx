@@ -5,6 +5,8 @@ import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa'
 import Link from 'next/link'
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear()
+
   return (
     <React.Fragment>
       <footer className="relative bg-white py-0 md:py-16">
@@ -81,21 +83,19 @@ const Footer = () => {
               <div className="body-text col-span-2 text-center text-[0.75rem] md:col-span-1 md:text-right">
                 Email:{' '}
                 <Link href="mailto:david@masonboost.com" className="underline">
-                  David@masonboost.com
+                  david@masonboost.com
                 </Link>{' '}
                 <br />
-                Maria:{' '}
                 <Link href="tel:+15877425355" className="underline">
                   (587) 742-5355
                 </Link>{' '}
                 <br />
-                M.B.L.T.D:{' '}
                 <Link href="tel:+15874094416" className="underline">
                   (587) 409-4416
                 </Link>{' '}
                 <br />
                 Office Hours: Mon-Fri, 9 AM - 5PM <br />
-                Copyright © 2024 Mason Boost. All rights reserved.
+                {`Copyright © ${currentYear} Mason Boost. All rights reserved.`}
               </div>
             </div>
           </div>

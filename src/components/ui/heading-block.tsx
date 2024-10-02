@@ -19,11 +19,16 @@ const headingVariants = cva('uppercase', {
     headingColor: {
       default: 'text-black',
       white: 'text-white',
+      gray: 'text-gray',
     },
     headingSize: {
       default: 'header-2',
       sm: 'text-[2rem] font-bold leading-tight md:text-[2.25rem] xl:text-[2rem]',
       md: 'text-[2rem] font-bold leading-tight md:text-[2.25rem] xl:text-[2.5rem]',
+      subheading: 'text-[24px]',
+    },
+    headingTextCase: {
+      normal: 'normal-case',
     },
   },
   defaultVariants: {
@@ -38,8 +43,9 @@ interface HeadingBlockProp {
   className?: string
   children?: React.ReactNode
   subheadingColor?: 'default' | 'white'
-  headingColor?: 'default' | 'white'
-  headingSize?: 'default' | 'sm' | 'md'
+  headingColor?: 'default' | 'white' | 'gray'
+  headingSize?: 'default' | 'sm' | 'md' | 'subheading'
+  headingTextCase?: 'normal'
 }
 
 const HeadingBlock = ({
@@ -50,6 +56,7 @@ const HeadingBlock = ({
   subheadingColor,
   headingColor,
   headingSize,
+  headingTextCase,
 }: HeadingBlockProp) => {
   return (
     <React.Fragment>
@@ -65,7 +72,7 @@ const HeadingBlock = ({
           {subheading && (
             <span className={cn(subheadingVariants({ subheadingColor }))}>{subheading}</span>
           )}
-          <div className={cn(headingVariants({ headingColor, headingSize }))}>
+          <div className={cn(headingVariants({ headingColor, headingSize, headingTextCase }))}>
             <h2>{heading}</h2>
           </div>
         </div>

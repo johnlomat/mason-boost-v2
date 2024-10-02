@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import NumberTicker from '@/components/ui/number-ticker'
-import HeadingBlock from '@/components/HeadingBlock'
+import HeadingBlock from '@/components/ui/heading-block'
 import {
   Card,
   CardContent,
@@ -12,7 +12,7 @@ import {
   CardHeader,
 } from '@/components/ui/card'
 import TextRevealByWord from '@/components/ui/text-reveal'
-import ImageWithText from '@/components/ImageWithText'
+import ImageWithText from '@/components/ui/image-with-text'
 import GetInTouchSection from '@/components/sections/get-in-touch'
 import OurPortfolioSection from '@/components/sections/our-portfolio'
 import {
@@ -21,7 +21,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
-import ProjectCard from '@/components/ProjectCard'
+import ProjectCard from '@/components/ui/project-card'
 
 export default function Home() {
   return (
@@ -34,7 +34,7 @@ export default function Home() {
             </div>
             <div className="text-center">
               <Button asChild variant="secondary">
-                <Link href="#">Get Your Consultation Today</Link>
+                <Link href="/contact-us">Get Your Consultation Today</Link>
               </Button>
             </div>
             <div className="grid grid-cols-4 gap-y-10 xl:grid-cols-5 xl:gap-y-0">
@@ -116,7 +116,7 @@ export default function Home() {
                   </p>
                 </div>
                 <Button asChild>
-                  <Link href="#">Find out more</Link>
+                  <Link href="/about-us">Find out more</Link>
                 </Button>
               </HeadingBlock>
             </div>
@@ -184,7 +184,7 @@ export default function Home() {
                 </CardDescription>
                 <div>
                   <Button asChild className="hover:border-white hover:bg-white">
-                    <Link href="#">Find out more</Link>
+                    <Link href="/services">Find out more</Link>
                   </Button>
                 </div>
               </CardContent>
@@ -226,7 +226,7 @@ export default function Home() {
                 </CardDescription>
                 <div>
                   <Button asChild className="hover:border-white hover:bg-white">
-                    <Link href="#">Find out more</Link>
+                    <Link href="/services">Find out more</Link>
                   </Button>
                 </div>
               </CardContent>
@@ -340,7 +340,7 @@ export default function Home() {
             <div className="space-y-16">
               <div className="mx-auto max-w-[700px]">
                 <HeadingBlock
-                  heading="What you’ll get with our wed design offer"
+                  heading="What you’ll get with our web design offer"
                   subheading="Our Features"
                   headingColor="white"
                   subheadingColor="white"
@@ -443,7 +443,7 @@ export default function Home() {
           </div>
           <div className="text-center">
             <Button asChild variant="outline-secondary">
-              <Link href="#">Learn more</Link>
+              <Link href="/work">Learn more</Link>
             </Button>
           </div>
         </div>
@@ -458,7 +458,7 @@ export default function Home() {
                   <p>Frequently Asked Questions</p>
                 </div>
                 <Button asChild variant="outline-secondary">
-                  <Link href="#">Start your project</Link>
+                  <Link href="/contact-us">Start your project</Link>
                 </Button>
               </HeadingBlock>
             </div>

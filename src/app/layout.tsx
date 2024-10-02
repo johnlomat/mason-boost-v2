@@ -6,6 +6,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import LenisScroll from '@/components/LenisScroll'
 import AnimatedCursor from '@/components/AnimatedCursor'
+import BackToTop from '@/components/BackToTop'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -15,7 +16,7 @@ const montserrat = Montserrat({
 })
 const roboto = Roboto({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['400', '500', '700'],
   display: 'swap',
   variable: '--font-roboto',
 })
@@ -34,6 +35,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn('antialiased', montserrat.variable, roboto.variable)}>
+        <div className="page-container font-montserrat">
+          <Header />
+          {children}
+          <Footer />
+        </div>
         <LenisScroll />
         <AnimatedCursor
           color="255, 255, 255"
@@ -54,6 +60,7 @@ export default function RootLayout({
             'textarea',
             'button',
             '.link',
+            '.back-to-top',
           ]}
           innerStyle={{
             border: '1px solid rgba(0, 0, 0)',
@@ -63,11 +70,7 @@ export default function RootLayout({
             outline: '1px solid rgba(0, 0, 0)',
           }}
         />
-        <div className="page-container font-montserrat">
-          <Header />
-          {children}
-          <Footer />
-        </div>
+        <BackToTop />
       </body>
     </html>
   )

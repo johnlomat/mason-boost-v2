@@ -36,7 +36,7 @@ const FormSchema = z.object({
   }),
 })
 
-export function ContactForm() {
+const ContactForm = () => {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -48,8 +48,28 @@ export function ContactForm() {
     },
   })
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    console.log(JSON.stringify(data, null, 2))
+  async function onSubmit(data: z.infer<typeof FormSchema>) {
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to send email')
+      }
+
+      const result = await response.json()
+      console.log(result) // Handle success response
+      // Optionally reset the form or show a success message
+      form.reset()
+    } catch (error) {
+      console.error('Error sending email:', error)
+      // Optionally show an error message to the user
+    }
   }
 
   return (
@@ -161,3 +181,5 @@ export function ContactForm() {
     </Form>
   )
 }
+
+export default ContactForm

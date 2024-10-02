@@ -1,104 +1,52 @@
 import React from 'react'
 import { cn } from '@/lib/utils'
-import Image from 'next/image'
 import { cva } from 'class-variance-authority'
+import { FaRegCheckCircle } from 'react-icons/fa'
 
-const headingVariants = cva('uppercase', {
+const indentVariants = cva('space-y-2 font-roboto font-medium', {
   variants: {
-    headingColor: {
-      default: 'text-[#353535]',
-      white: 'text-white',
+    indent: {
+      default: 'ps-5',
+      sm: 'ps-4',
+      md: 'ps-6',
+      lg: 'ps-8',
+      xl: 'ps-10',
     },
   },
   defaultVariants: {
-    headingColor: 'default',
+    indent: 'default',
   },
 })
 
-const descriptionVariants = cva('', {
-  variants: {
-    descriptionColor: {
-      default: 'body-text',
-      gray: 'text-gray',
-    },
-  },
-  defaultVariants: {
-    descriptionColor: 'default',
-  },
-})
-
-type BaseProps = {
-  heading?: string
-  headingColor?: 'default' | 'white'
-  description: string
-  descriptionColor?: 'default' | 'gray'
-  className?: string
+interface ItemListProp {
+  items: string[]
+  indent?: 'default' | 'sm' | 'md' | 'lg' | 'xl'
+  useIcon?: boolean
 }
 
-type WithImage = BaseProps & {
-  useImage: true
-  imageSrc: string
-  bullet?: never
-  bulletNoBackground?: never
-  imageWidth: number
-  imageHeight: number
-  imageAlt: string
-}
-type WithoutImage = BaseProps & {
-  useImage?: false
-  imageSrc?: never
-  bullet: string
-  bulletNoBackground?: boolean
-  imageWidth?: never
-  imageHeight?: never
-  imageAlt?: never
-}
-
-type ItemListProp = WithImage | WithoutImage
-
-const ItemList = ({
-  bullet,
-  heading,
-  headingColor,
-  description,
-  descriptionColor,
-  bulletNoBackground = false,
-  useImage,
-  imageSrc,
-  imageWidth,
-  imageHeight,
-  imageAlt,
-  className,
-}: ItemListProp) => {
+const ItemList = ({ items, indent, useIcon }: ItemListProp) => {
   return (
     <React.Fragment>
-      <div
-        className={cn(
-          'flex flex-col items-center space-x-0 space-y-6 text-center xl:flex-row xl:items-start xl:space-x-[1.25rem] xl:space-y-0 xl:text-left',
-          className,
-        )}
-      >
-        {useImage ? (
-          <Image src={imageSrc} alt={imageAlt} width={imageWidth} height={imageHeight} />
-        ) : (
-          <div
-            className={cn(
-              'border-primary text-primary flex h-[58px] w-[58px] items-center justify-center rounded-full border-2 p-[25px] font-semibold',
-              { 'bg-primary text-white': bulletNoBackground === false },
-            )}
-          >
-            {bullet}
-          </div>
-        )}
-        <div className={cn({ 'space-y-4 self-center': heading })}>
-          <div className={cn('header-5', headingVariants({ headingColor }))}>
-            <h3>{heading}</h3>
-          </div>
-          <div className={cn(descriptionVariants({ descriptionColor }))}>
-            <p>{description}</p>
-          </div>
-        </div>
-      </div>
+      {!useIcon ? (
+        <ul className={cn(indentVariants({ indent }))}>
+          {items.map((item, key) => (
+            <li key={key} className="list-disc">
+              {item}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <ul className={cn(indentVariants({ indent }))}>
+          {items.map((item, key) => (
+            <li key={key} className="flex gap-x-4">
+              <div className="mt-[0.05rem] h-5 w-5 text-[1.2rem] text-[#E58D35]">
+                <FaRegCheckCircle />
+              </div>
+              {item}
+            </li>
+          ))}
+        </ul>
+      )}
     </React.Fragment>
   )
 }

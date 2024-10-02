@@ -1,10 +1,15 @@
 import React from 'react'
-import HeroSection from '@/components/ui/hero-section'
-import HeadingBlock from '@/components/HeadingBlock'
-import ItemList from '@/components/ui/item-list'
-import { ContactForm } from '@/components/forms/ContactForm'
-import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa'
+import type { Metadata } from 'next'
 import Link from 'next/link'
+import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa'
+import HeroSection from '@/components/ui/hero-section'
+import HeadingBlock from '@/components/ui/heading-block'
+import Blurb from '@/components/ui/blurb'
+import ContactForm from '@/components/forms/ContactForm'
+
+export const metadata: Metadata = {
+  title: 'Contact Us | Mason Boost',
+}
 
 export default function ContactUsPage() {
   return (
@@ -45,7 +50,7 @@ export default function ContactUsPage() {
                   </div>
                   <div className="grid grid-cols-4 gap-x-6 gap-y-12">
                     <div className="col-span-4 md:col-span-2">
-                      <ItemList
+                      <Blurb
                         heading="Phone"
                         headingColor="white"
                         description="(844) 489-1115"
@@ -58,7 +63,7 @@ export default function ContactUsPage() {
                       />
                     </div>
                     <div className="col-span-4 md:col-span-2">
-                      <ItemList
+                      <Blurb
                         heading="Email"
                         headingColor="white"
                         description="info@masonboost.com"
@@ -71,7 +76,7 @@ export default function ContactUsPage() {
                       />
                     </div>
                     <div className="col-span-4 md:col-span-4">
-                      <ItemList
+                      <Blurb
                         heading="Address"
                         headingColor="white"
                         description="128 City Road, London, United Kingdom"

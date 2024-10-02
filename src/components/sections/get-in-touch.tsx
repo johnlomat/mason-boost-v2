@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import HeadingBlock from '@/components/HeadingBlock'
+import HeadingBlock from '@/components/ui/heading-block'
 import { Button } from '@/components/ui/button'
 
 const GetInTouchSection = () => {
@@ -12,7 +12,7 @@ const GetInTouchSection = () => {
             <HeadingBlock heading="Get in touch" headingColor="white" />
             <div>
               <Button asChild variant="outline-secondary">
-                <Link href="#">Start your project</Link>
+                <Link href="/contact-us">Start your project</Link>
               </Button>
             </div>
           </div>
@@ -33,10 +33,12 @@ const GetInTouchSection = () => {
               </div>
               <div className="col-span-2 mr-0 flex flex-col items-start md:col-span-1 md:items-end lg:mr-16">
                 <div className="header-5 text-white">
-                  <h4>Team Member 1 Name</h4>
+                  <h4>Contact David</h4>
                 </div>
                 <div className="text-gray">
-                  <p>support@[brandname].com</p>
+                  <Link href="mailto:david@masonboost.com" className="underline">
+                    david@masonboost.com
+                  </Link>
                 </div>
               </div>
             </div>
@@ -58,10 +60,12 @@ const GetInTouchSection = () => {
               </div>
               <div className="col-span-2 mr-0 flex flex-col items-start md:col-span-1 md:items-end lg:mr-16">
                 <div className="header-5 text-white">
-                  <h4>Team Member 2 Name</h4>
+                  <h4>Contact David</h4>
                 </div>
                 <div className="text-gray">
-                  <p>support@[brandname].com</p>
+                  <Link href="mailto:david@masonboost.com" className="underline">
+                    david@masonboost.com
+                  </Link>
                 </div>
               </div>
             </div>

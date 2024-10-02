@@ -1,11 +1,16 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import HeadingBlock from '@/components/HeadingBlock'
+import HeadingBlock from '@/components/ui/heading-block'
 import { Button } from '@/components/ui/button'
 import OurPortfolioSection from '@/components/sections/our-portfolio'
 import GetInTouchSection from '@/components/sections/get-in-touch'
-import ItemList from '@/components/ui/item-list'
+import Blurb from '@/components/ui/blurb'
 import HeroSection from '@/components/ui/hero-section'
+
+export const metadata: Metadata = {
+  title: 'About Us | Mason Boost',
+}
 
 export default function AboutUsPage() {
   return (
@@ -112,7 +117,7 @@ export default function AboutUsPage() {
               </div>
               <div className="text-center">
                 <Button asChild>
-                  <Link href="#">Get a free consultation today</Link>
+                  <Link href="/contact-us">Get a free consultation today</Link>
                 </Button>
               </div>
             </HeadingBlock>
@@ -132,7 +137,7 @@ export default function AboutUsPage() {
                 headingSize="sm"
                 className="text-center lg:text-left"
               />
-              <ItemList
+              <Blurb
                 description="Mason Boost Ltd. 128 City Road, London, United Kingdom, EC1V 2NX"
                 useImage={true}
                 imageSrc="/images/map-01.svg"
