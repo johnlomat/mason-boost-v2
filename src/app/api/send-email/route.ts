@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
   }
 
   const mailOptions = {
-    from: 'Mason Boost Website Inquiry <no-reply@gomasonboost.com>',
+    from: `Mason Boost Website Inquiry <${process.env.SMTP_USERNAME}>`,
     to: 'edwardlomat1503@gmail.com',
     replyTo: email,
     subject: `New inquiry from ${name}`,
