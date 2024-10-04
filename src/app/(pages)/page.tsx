@@ -40,29 +40,28 @@ export default function Home() {
             <div className="grid grid-cols-4 gap-y-10 xl:grid-cols-5 xl:gap-y-0">
               <div className="col-span-4 flex flex-col space-y-1 text-center text-white md:col-span-2 xl:col-span-1 xl:text-left">
                 <span className="text-[2.4rem] font-medium">
-                  <NumberTicker className="text-white" value={5} />
-                  k+
+                  <NumberTicker className="text-white" value={3} />
                 </span>
-                <span>Satisfied Customers</span>
+                <span>Free Projects Remaining</span>
               </div>
               <div className="col-span-4 flex flex-col space-y-1 text-center text-white md:col-span-2 xl:col-span-1 xl:text-left">
                 <span className="text-[2.4rem] font-medium">
-                  <NumberTicker className="text-white" value={15} />
+                  <NumberTicker className="text-white" value={20} />+
                 </span>
-                <span>Years Experience</span>
+                <span>Years Combined Experience</span>
               </div>
               <div className="col-span-1 hidden xl:block"></div>
               <div className="col-span-4 flex flex-col space-y-1 text-center text-white md:col-span-2 xl:col-span-1 xl:text-left">
                 <span className="text-[2.4rem] font-medium">
-                  <NumberTicker className="text-white" value={28} />
+                  <NumberTicker className="text-white" value={5} />
                 </span>
-                <span>Experienced Member</span>
+                <span>Dedicated Team Members</span>
               </div>
               <div className="col-span-4 flex flex-col space-y-1 text-center text-white md:col-span-2 xl:col-span-1 xl:text-left">
                 <span className="text-[2.4rem] font-medium">
-                  <NumberTicker className="text-white" value={1500} />+
+                  <NumberTicker className="text-white" value={1} />
                 </span>
-                <span>Successful Projects</span>
+                <span>Building Our 1st Portfolio</span>
               </div>
             </div>
           </div>
@@ -467,34 +466,70 @@ export default function Home() {
                 <AccordionItem value="item-1">
                   <AccordionTrigger>What services do you offer?</AccordionTrigger>
                   <AccordionContent>
-                    Yes. It adheres to the WAI-ARIA design pattern.
+                    We offer professional website design and development services, tailored to meet
+                    the needs of modern businesses. Right now, we’re offering a limited-time
+                    opportunity to receive a free website design as part of our portfolio-building
+                    process.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2">
                   <AccordionTrigger>How long does it take to design a website?</AccordionTrigger>
                   <AccordionContent>
-                    Yes. It comes with default styles that matches the other components&apos;
-                    aesthetic.
+                    Our free website offer includes a 7-10 day turnaround, so you’ll have your new,
+                    fully functional website quickly.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3">
-                  <AccordionTrigger>Can I update the website myself?</AccordionTrigger>
-                  <AccordionContent>
-                    Yes. It&apos;s animated by default, but you can disable it if you prefer.
-                  </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-4">
                   <AccordionTrigger>
                     What if I need changes after the website is live?
                   </AccordionTrigger>
                   <AccordionContent>
-                    Yes. It&apos;s animated by default, but you can disable it if you prefer.
+                    We’re happy to make any minor updates free of charge, ensuring your website
+                    stays fresh and accurate.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-4">
+                  <AccordionTrigger>Do you provide website hosting?</AccordionTrigger>
+                  <AccordionContent>
+                    Yes, we can provide hosting services for your website, and we’ll help you get
+                    everything set up so you don’t have to worry about the technical details.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-5">
-                  <AccordionTrigger>Do you provide website hosting?</AccordionTrigger>
+                  <AccordionTrigger>How does your free website design offer work?</AccordionTrigger>
                   <AccordionContent>
-                    Yes. It&apos;s animated by default, but you can disable it if you prefer.
+                    We’re offering 3 free website design projects to select businesses. In return,
+                    we ask for a simple Trustpilot review and permission to showcase the website in
+                    our portfolio. That’s it—no hidden fees or strings attached.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-6">
+                  <AccordionTrigger>Will my new website be mobile-friendly?</AccordionTrigger>
+                  <AccordionContent>
+                    Absolutely! All our websites are designed to be fully responsive, so they look
+                    and function beautifully on all devices—desktops, tablets, and smartphones.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-7">
+                  <AccordionTrigger>What happens after you complete my website?</AccordionTrigger>
+                  <AccordionContent>
+                    Once your website is live, you’ll have full control over it. We’ll also be
+                    available for any additional support or questions you may have.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-8">
+                  <AccordionTrigger>What’s the catch?</AccordionTrigger>
+                  <AccordionContent>
+                    There’s no catch! This is a genuine offer as we’re building our portfolio. All
+                    we ask in return is a Trustpilot review and permission to showcase your new
+                    website.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-9">
+                  <AccordionTrigger>Can I see examples of your work?</AccordionTrigger>
+                  <AccordionContent>
+                    We’re currently building our portfolio. Once our first few projects are
+                    completed, you’ll be able to see examples of our work on our website.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
