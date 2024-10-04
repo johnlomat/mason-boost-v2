@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
   }
 
   const mailOptions = {
-    from: 'Website Inquiry <no-reply@gomasonboost.com>',
+    from: 'Mason Boost Website Inquiry <no-reply@gomasonboost.com>',
     to: 'edwardlomat1503@gmail.com',
     replyTo: email,
     subject: `New inquiry from ${name}`,
@@ -35,6 +35,9 @@ export async function POST(req: NextRequest) {
     auth: {
       user: process.env.SMTP_USERNAME,
       pass: process.env.SMTP_PASSWORD,
+    },
+    tls: {
+      rejectUnauthorized: false, // This can help with self-signed certificates, remove if not needed
     },
   })
 
