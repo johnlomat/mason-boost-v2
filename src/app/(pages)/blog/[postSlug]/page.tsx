@@ -1,8 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
-import getPostBySlug from '@/lib/getPostBySlug'
+
 import HeroSection from '@/components/ui/hero-section'
+import getPostBySlug from '@/lib/getPostBySlug'
 
 export default async function PostPage({ params: { postSlug } }: { params: { postSlug: string } }) {
   const getPost = await getPostBySlug(postSlug)
@@ -12,28 +13,28 @@ export default async function PostPage({ params: { postSlug } }: { params: { pos
     notFound()
   }
 
-  const postTitle = postData.title
-  const postContent = postData.content
-  const featuredImage = postData.featuredImage.node.sourceUrl
-  const featuredImageAltText = postData.featuredImage.node.altText
-  const featuredImageWidth = postData.featuredImage.node.mediaDetails.width
-  const featuredImageHeight = postData.featuredImage.node.mediaDetails.height
+  const {
+    title,
+    content,
+    featuredImage: {
+      node: {
+        sourceUrl,
+        altText,
+        mediaDetails: { width, height },
+      },
+    },
+  } = postData
 
   return (
     <React.Fragment>
       <main>
-        <HeroSection heading={postTitle} />
+        <HeroSection heading={title} />
         <section className="relative bg-white pt-16">
           <div className="container space-y-12">
-            <Image
-              src={featuredImage}
-              alt={featuredImageAltText}
-              width={featuredImageWidth}
-              height={featuredImageHeight}
-            />
+            <Image src={sourceUrl} alt={altText} width={width} height={height} />
             <div
               className="post-content mx-auto max-w-[780px]"
-              dangerouslySetInnerHTML={{ __html: postContent }}
+              dangerouslySetInnerHTML={{ __html: content }}
             />
           </div>
         </section>

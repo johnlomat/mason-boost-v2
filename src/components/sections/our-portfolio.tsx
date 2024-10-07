@@ -1,11 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { cva } from 'class-variance-authority'
+
 import HeadingBlock from '@/components/ui/heading-block'
 import { Button } from '@/components/ui/button'
 import Marquee from '@/components/ui/marquee'
 import { cn } from '@/lib/utils'
-import { cva } from 'class-variance-authority'
 
 const sectionBackgroundVariants = cva('relative py-16 xl:py-[7.5rem]', {
   variants: { sectionBackgroundColor: { default: 'bg-brown', black: 'bg-black' } },

@@ -3,6 +3,7 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
+import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -16,7 +17,7 @@ import {
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 
-import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
+import { useToast } from '@/hooks/use-toast'
 
 const FormSchema = z.object({
   name: z.string().min(2, {
@@ -48,6 +49,8 @@ const ContactForm = () => {
     },
   })
 
+  const { toast } = useToast()
+
   async function onSubmit(data: z.infer<typeof FormSchema>) {
     try {
       const response = await fetch('/api/send-email', {
@@ -65,6 +68,9 @@ const ContactForm = () => {
       const result = await response.json()
       console.log(result) // Handle success response
       // Optionally reset the form or show a success message
+      toast({
+        description: 'Your message has been sent.',
+      })
       form.reset()
     } catch (error) {
       console.error('Error sending email:', error)

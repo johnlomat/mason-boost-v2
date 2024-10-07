@@ -1,4 +1,4 @@
-const getPostBySlug = async (postSlug: string) => {
+const getAllPosts = async () => {
   try {
     const response = await fetch(String(process.env.WORDPRESS_GRAPHQL_API), {
       method: 'POST',
@@ -7,28 +7,27 @@ const getPostBySlug = async (postSlug: string) => {
       },
       body: JSON.stringify({
         query: `
-          query Posts($postSlug: ID!) {
-            post(idType: SLUG, id: $postSlug) {
-                id
-                featuredImage {
-                    node {
-                        id
-                        altText
-                        sourceUrl
-                        mediaDetails {
-                            width
-                            height
+          query AllPosts {
+            posts(first: 3) {
+                nodes {
+                    id
+                    featuredImage {
+                        node {
+                            altText
+                            sourceUrl
+                            mediaDetails {
+                                height
+                                width
+                            }
                         }
                     }
+                    title
+                    excerpt
+                    slug
                 }
-                content
-                title
             }
         }
         `,
-        variables: {
-          postSlug: postSlug,
-        },
       }),
       next: {
         revalidate: 60,
@@ -45,4 +44,4 @@ const getPostBySlug = async (postSlug: string) => {
   }
 }
 
-export default getPostBySlug
+export default getAllPosts

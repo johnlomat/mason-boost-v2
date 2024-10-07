@@ -2,6 +2,7 @@ import React from 'react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa'
+
 import HeroSection from '@/components/ui/hero-section'
 import HeadingBlock from '@/components/ui/heading-block'
 import Blurb from '@/components/ui/blurb'

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+
 import HeadingBlock from '@/components/ui/heading-block'
 import { Button } from '@/components/ui/button'
 import OurPortfolioSection from '@/components/sections/our-portfolio'

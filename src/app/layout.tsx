@@ -1,12 +1,14 @@
 import type { Metadata } from 'next'
 import { Montserrat, Roboto } from 'next/font/google'
+
 import './globals.css'
-import { cn } from '@/lib/utils'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import LenisScroll from '@/components/LenisScroll'
 import AnimatedCursor from '@/components/AnimatedCursor'
 import BackToTop from '@/components/BackToTop'
+import { Toaster } from '@/components/ui/toaster'
+import { cn } from '@/lib/utils'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -71,6 +73,7 @@ export default function RootLayout({
           }}
         />
         <BackToTop />
+        <Toaster />
       </body>
     </html>
   )

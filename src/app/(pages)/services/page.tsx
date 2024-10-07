@@ -2,12 +2,14 @@ import React from 'react'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+
 import HeroSection from '@/components/ui/hero-section'
 import HeadingBlock from '@/components/ui/heading-block'
 import GetInTouchSection from '@/components/sections/get-in-touch'
 import { Button } from '@/components/ui/button'
 import ProjectCard from '@/components/ui/project-card'
 import ItemList from '@/components/ui/item-list'
+import BlogInsightsTipsSection from '@/components/sections/blog-insights-tips'
 
 export const metadata: Metadata = {
   title: 'Services | Mason Boost',
@@ -296,72 +298,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="relative bg-black py-16">
-          <div className="container">
-            <div className="space-y-14">
-              <div className="grid grid-cols-3 gap-y-10">
-                <div className="col-span-3 md:col-span-2">
-                  <HeadingBlock heading="Related Articles" headingColor="white" headingSize="md" />
-                </div>
-                <div className="col-span-3 flex items-center justify-start md:col-span-1 md:justify-end">
-                  <Button asChild variant="outline-secondary" className="uppercase">
-                    <Link href="#">Find out more</Link>
-                  </Button>
-                </div>
-              </div>
-              <div className="mb-10 grid grid-cols-3 gap-x-7 gap-y-7 md:gap-y-[4rem] xl:mb-[4.5rem]">
-                <div className="col-span-3 md:col-span-1">
-                  <div className="space-y-6">
-                    <Image
-                      src="/images/Rectangle-116.png"
-                      alt="Article 1"
-                      width={411}
-                      height={280}
-                    />
-                    <HeadingBlock
-                      heading="[Title and brief description]"
-                      headingSize="subheading"
-                      headingColor="gray"
-                      headingTextCase="normal"
-                    />
-                  </div>
-                </div>
-                <div className="col-span-3 md:col-span-1">
-                  <div className="space-y-6">
-                    <Image
-                      src="/images/Rectangle-117.png"
-                      alt="Article 2"
-                      width={411}
-                      height={280}
-                    />
-                    <HeadingBlock
-                      heading="[Title and brief description]"
-                      headingSize="subheading"
-                      headingColor="gray"
-                      headingTextCase="normal"
-                    />
-                  </div>
-                </div>
-                <div className="col-span-3 md:col-span-1">
-                  <div className="space-y-6">
-                    <Image
-                      src="/images/Rectangle-118.png"
-                      alt="Article 3"
-                      width={411}
-                      height={280}
-                    />
-                    <HeadingBlock
-                      heading="[Title and brief description]"
-                      headingSize="subheading"
-                      headingColor="gray"
-                      headingTextCase="normal"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <BlogInsightsTipsSection />
 
         <section className="relative bg-white py-16 xl:py-[5.8rem]">
           <div className="container">

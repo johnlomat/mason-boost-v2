@@ -1,7 +1,8 @@
 import React from 'react'
-import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import { cva } from 'class-variance-authority'
+
+import { cn } from '@/lib/utils'
 
 const headingVariants = cva('uppercase', {
   variants: {

@@ -1,8 +1,9 @@
 import React from 'react'
-import NewsLetterForm from '@/components/forms/NewsLetter'
 import Image from 'next/image'
-import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa'
 import Link from 'next/link'
+import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa'
+
+import NewsLetterForm from '@/components/forms/NewsLetter'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
