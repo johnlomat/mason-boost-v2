@@ -4,7 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'wordpress.gomasonboost.com',
+        hostname: 'wordpress.masonboost.com',
         port: '',
         pathname: '/wp-content/uploads/**',
       },
