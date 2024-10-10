@@ -39,7 +39,7 @@ export default async function Home() {
                 <Link href="/contact-us">Get Your Consultation Today</Link>
               </Button>
             </div>
-            <div className="grid grid-cols-4 gap-y-10 xl:grid-cols-5 xl:gap-y-0">
+            <div className="grid grid-cols-4 gap-y-10 xl:grid-cols-5 xl:gap-x-[1.5rem] xl:gap-y-0">
               <div className="col-span-4 flex flex-col space-y-1 text-center text-white md:col-span-2 xl:col-span-1 xl:text-left">
                 <span className="text-[2.4rem] font-medium">
                   <NumberTicker className="text-white" value={3} />
