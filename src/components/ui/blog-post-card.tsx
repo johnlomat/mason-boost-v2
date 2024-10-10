@@ -36,10 +36,10 @@ const BlogPostCard = ({
         <div className="relative overflow-hidden">
           <Image src={sourceUrl} alt={altText} width={width} height={height} />
           <div className="space-y-6 bg-black p-7">
-            <div className="header-4 text-white">
+            <div className="header-5 text-white">
               <h3>{title}</h3>
             </div>
-            <div className="subheading text-gray" dangerouslySetInnerHTML={{ __html: excerpt }} />
+            <div className="text-gray" dangerouslySetInnerHTML={{ __html: excerpt }} />
           </div>
         </div>
       </Link>

@@ -29,7 +29,8 @@ export default async function PostPage({ params: { postSlug } }: { params: { pos
     <React.Fragment>
       <main>
         <HeroSection heading={title} />
-        <section className="relative bg-white pt-16">
+
+        <section className="relative bg-white pb-8 pt-16 md:pb-0">
           <div className="container space-y-12">
             <Image src={sourceUrl} alt={altText} width={width} height={height} />
             <div
