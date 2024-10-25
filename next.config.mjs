@@ -4,7 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'wordpress.masonboost.com',
+        hostname: 'masonboost.headlesspress.xyz',
         port: '',
         pathname: '/wp-content/uploads/**',
       },
