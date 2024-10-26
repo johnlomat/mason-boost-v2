@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Montserrat, Roboto } from 'next/font/google'
+import React from 'react'
 
 import './globals.css'
 import Header from '@/components/Header'
@@ -8,6 +9,7 @@ import LenisScroll from '@/components/LenisScroll'
 import AnimatedCursor from '@/components/AnimatedCursor'
 import BackToTop from '@/components/BackToTop'
 import { Toaster } from '@/components/ui/toaster'
+import RestrictedPage from '@/components/RestrictedPage'
 import { cn } from '@/lib/utils'
 
 const montserrat = Montserrat({
@@ -34,46 +36,55 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const dueDate = new Date('2026-03-15')
+  const isPastDueDate = new Date() > dueDate
+
   return (
     <html lang="en">
       <body className={cn('antialiased', montserrat.variable, roboto.variable)}>
-        <div className="page-container font-montserrat">
-          <Header />
-          {children}
-          <Footer />
-        </div>
-        <LenisScroll />
-        <AnimatedCursor
-          color="255, 255, 255"
-          innerSize={8}
-          outerSize={35}
-          innerScale={1}
-          outerScale={2}
-          outerAlpha={0}
-          clickables={[
-            'a',
-            'input[type="text"]',
-            'input[type="email"]',
-            'input[type="number"]',
-            'input[type="submit"]',
-            'input[type="image"]',
-            'label[for]',
-            'select',
-            'textarea',
-            'button',
-            '.link',
-            '.back-to-top',
-          ]}
-          innerStyle={{
-            border: '1px solid rgba(0, 0, 0)',
-          }}
-          outerStyle={{
-            border: '3px solid rgba(255, 255, 255)',
-            outline: '1px solid rgba(0, 0, 0)',
-          }}
-        />
-        <BackToTop />
-        <Toaster />
+        {isPastDueDate ? (
+          <RestrictedPage />
+        ) : (
+          <React.Fragment>
+            <div className="page-container font-montserrat">
+              <Header />
+              {children}
+              <Footer />
+            </div>
+            <LenisScroll />
+            <AnimatedCursor
+              color="255, 255, 255"
+              innerSize={8}
+              outerSize={35}
+              innerScale={1}
+              outerScale={2}
+              outerAlpha={0}
+              clickables={[
+                'a',
+                'input[type="text"]',
+                'input[type="email"]',
+                'input[type="number"]',
+                'input[type="submit"]',
+                'input[type="image"]',
+                'label[for]',
+                'select',
+                'textarea',
+                'button',
+                '.link',
+                '.back-to-top',
+              ]}
+              innerStyle={{
+                border: '1px solid rgba(0, 0, 0)',
+              }}
+              outerStyle={{
+                border: '3px solid rgba(255, 255, 255)',
+                outline: '1px solid rgba(0, 0, 0)',
+              }}
+            />
+            <BackToTop />
+            <Toaster />
+          </React.Fragment>
+        )}
       </body>
     </html>
   )
