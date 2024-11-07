@@ -36,12 +36,6 @@ body {
 .container {
   @apply max-[767px]:px-[1.5rem];
 }
-.post-content h2 {
-  @apply mb-2 text-[1.25rem] font-bold leading-tight md:text-[1.5rem] xl:text-[2rem];
-}
-.post-content p {
-  @apply mb-7;
-}
 
 html {
   font-size: 16px;

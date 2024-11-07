@@ -34,7 +34,7 @@ export default async function PostPage({ params: { postSlug } }: { params: { pos
           <div className="container space-y-12">
             <Image src={sourceUrl} alt={altText} width={width} height={height} />
             <div
-              className="post-content mx-auto max-w-[780px]"
+              className="mx-auto max-w-[780px] [&_h2]:mb-2 [&_h2]:text-[1.25rem] [&_h2]:font-bold [&_h2]:leading-tight [&_h2]:md:text-[1.5rem] [&_h2]:xl:text-[2rem] [&_p:last-child]:mb-0 [&_p]:mb-7"
               dangerouslySetInnerHTML={{ __html: content }}
             />
           </div>
