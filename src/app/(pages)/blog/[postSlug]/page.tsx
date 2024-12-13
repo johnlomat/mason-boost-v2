@@ -5,7 +5,13 @@ import { notFound } from 'next/navigation'
 import HeroSection from '@/components/ui/hero-section'
 import getPostBySlug from '@/lib/getPostBySlug'
 
-export default async function PostPage({ params: { postSlug } }: { params: { postSlug: string } }) {
+export default async function PostPage(props: { params: Promise<{ postSlug: string }> }) {
+  const params = await props.params;
+
+  const {
+    postSlug
+  } = params;
+
   const getPost = await getPostBySlug(postSlug)
   const postData = getPost.data.post
 

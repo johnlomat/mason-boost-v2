@@ -1,7 +1,7 @@
 'use client'
 
 import { FC, ReactNode, useRef } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, MotionValue, useScroll, useTransform } from 'framer-motion'
 
 import { cn } from '@/lib/utils'
 
@@ -43,8 +43,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({ text, className, c
 
 interface WordProps {
   children: ReactNode
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  progress: any
+  progress: MotionValue<number>
   range: [number, number]
 }
 
