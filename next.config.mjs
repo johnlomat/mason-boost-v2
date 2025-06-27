@@ -4,7 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'masonboost.headlesspress.xyz',
+        hostname: 'masonboost.johnquery.com',
         port: '',
         pathname: '/wp-content/uploads/**',
       },
